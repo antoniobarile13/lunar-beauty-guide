@@ -61,7 +61,41 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				lunar: {
+					primary: 'hsl(var(--lunar-primary))',
+					glow: 'hsl(var(--lunar-glow))',
+					surface: 'hsl(var(--lunar-surface))',
+					shadow: 'hsl(var(--lunar-shadow))'
+				},
+				beauty: {
+					cut: 'hsl(var(--beauty-cut))',
+					color: 'hsl(var(--beauty-color))',
+					wax: 'hsl(var(--beauty-wax))',
+					treat: 'hsl(var(--beauty-treat))'
+				},
+				badge: {
+					excellent: 'hsl(var(--badge-excellent))',
+					good: 'hsl(var(--badge-good))',
+					neutral: 'hsl(var(--badge-neutral))',
+					'not-ideal': 'hsl(var(--badge-not-ideal))',
+					avoid: 'hsl(var(--badge-avoid))'
 				}
+			},
+			backgroundImage: {
+				'gradient-lunar': 'var(--gradient-lunar)',
+				'gradient-glow': 'var(--gradient-glow)',
+				'gradient-beauty': 'var(--gradient-beauty)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'lunar': 'var(--shadow-lunar)',
+				'glow': 'var(--shadow-glow)',
+				'soft': 'var(--shadow-soft)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

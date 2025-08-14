@@ -1,0 +1,85 @@
+{
+  "app": {
+    "title": "Calendario Lunare Bellezza",
+    "subtitle": "Consigli di bellezza basati sulle fasi lunari"
+  },
+  "navigation": {
+    "today": "Oggi",
+    "calendar": "Calendario", 
+    "settings": "Impostazioni"
+  },
+  "today": {
+    "title": "Oggi",
+    "moonPhase": "Fase Lunare",
+    "illumination": "Illuminazione",
+    "moonAge": "Età lunare",
+    "days": "giorni",
+    "todayAdvice": "I tuoi consigli di oggi",
+    "seeDetails": "Vedi dettagli",
+    "bestAdvice": "Consiglio del giorno"
+  },
+  "calendar": {
+    "title": "Calendario Lunare",
+    "monthYear": "{{month}} {{year}}",
+    "previousMonth": "Mese precedente",
+    "nextMonth": "Mese successivo",
+    "goToToday": "Vai a oggi"
+  },
+  "dayDetail": {
+    "title": "Dettaglio del giorno",
+    "moonInfo": "Informazioni lunari",
+    "whyToday": "Perché oggi",
+    "beautyAdvice": "Consigli di bellezza",
+    "backToCalendar": "Torna al calendario"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "language": "Lingua",
+    "timezone": "Fuso orario",
+    "notifications": "Notifiche",
+    "dailyReminder": "Promemoria giornaliero",
+    "reminderTime": "Orario promemoria",
+    "about": "Info"
+  },
+  "phases": {
+    "NEW": "Luna Nuova",
+    "WAXING_CRESCENT": "Luna Crescente",
+    "FIRST_QUARTER": "Primo Quarto",
+    "WAXING_GIBBOUS": "Gibbosa Crescente",
+    "FULL": "Luna Piena",
+    "WANING_GIBBOUS": "Gibbosa Calante",
+    "LAST_QUARTER": "Ultimo Quarto",
+    "WANING_CRESCENT": "Luna Calante"
+  },
+  "categories": {
+    "cut": "Taglio",
+    "color": "Colore",
+    "wax": "Ceretta",
+    "treat": "Trattamenti"
+  },
+  "badges": {
+    "Excellent": "Ottimo",
+    "Good": "Buono",
+    "Neutral": "Neutro",
+    "NotIdeal": "Sconsigliato",
+    "Avoid": "Da evitare"
+  },
+  "phaseExplanations": {
+    "NEW": "Durante la luna nuova, l'energia è rivolta verso l'interno. È il momento ideale per la purificazione e i nuovi inizi.",
+    "WAXING_CRESCENT": "La luna crescente porta energia di crescita e sviluppo. Perfetta per nutrire e stimolare.",
+    "FIRST_QUARTER": "Il primo quarto è un momento di azione e decisioni. L'energia è forte e dinamica.",
+    "WAXING_GIBBOUS": "La luna gibbosa crescente amplifica gli effetti. È il momento di massima potenza per i trattamenti.",
+    "FULL": "La luna piena porta energia intensa ma può causare sensibilità. Ideale per il relax e la cura.",
+    "WANING_GIBBOUS": "La luna gibbosa calante favorisce il rilascio e la riparazione dei danni.",
+    "LAST_QUARTER": "L'ultimo quarto è perfetto per eliminare ciò che non serve più, come i peli superflui.",
+    "WANING_CRESCENT": "La luna calante conclude il ciclo. È il momento della pulizia profonda e del reset."
+  },
+  "weekdays": {
+    "short": ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab"],
+    "long": ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"]
+  },
+  "months": {
+    "short": ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"],
+    "long": ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"]
+  }
+}

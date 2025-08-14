@@ -1,0 +1,85 @@
+{
+  "app": {
+    "title": "Lunar Beauty Calendar",
+    "subtitle": "Beauty advice based on moon phases"
+  },
+  "navigation": {
+    "today": "Today",
+    "calendar": "Calendar",
+    "settings": "Settings"
+  },
+  "today": {
+    "title": "Today",
+    "moonPhase": "Moon Phase",
+    "illumination": "Illumination",
+    "moonAge": "Moon age",
+    "days": "days",
+    "todayAdvice": "Your advice for today",
+    "seeDetails": "See details",
+    "bestAdvice": "Advice of the day"
+  },
+  "calendar": {
+    "title": "Lunar Calendar",
+    "monthYear": "{{month}} {{year}}",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "goToToday": "Go to today"
+  },
+  "dayDetail": {
+    "title": "Day detail",
+    "moonInfo": "Moon information",
+    "whyToday": "Why today",
+    "beautyAdvice": "Beauty advice",
+    "backToCalendar": "Back to calendar"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "timezone": "Timezone",
+    "notifications": "Notifications",
+    "dailyReminder": "Daily reminder",
+    "reminderTime": "Reminder time",
+    "about": "About"
+  },
+  "phases": {
+    "NEW": "New Moon",
+    "WAXING_CRESCENT": "Waxing Crescent",
+    "FIRST_QUARTER": "First Quarter",
+    "WAXING_GIBBOUS": "Waxing Gibbous",
+    "FULL": "Full Moon",
+    "WANING_GIBBOUS": "Waning Gibbous",
+    "LAST_QUARTER": "Last Quarter",
+    "WANING_CRESCENT": "Waning Crescent"
+  },
+  "categories": {
+    "cut": "Haircut",
+    "color": "Color",
+    "wax": "Waxing",
+    "treat": "Treatments"
+  },
+  "badges": {
+    "Excellent": "Excellent",
+    "Good": "Good",
+    "Neutral": "Neutral",
+    "NotIdeal": "Not ideal",
+    "Avoid": "Avoid"
+  },
+  "phaseExplanations": {
+    "NEW": "During the new moon, energy is directed inward. It's the ideal time for purification and new beginnings.",
+    "WAXING_CRESCENT": "The waxing crescent brings growth and development energy. Perfect for nourishing and stimulating.",
+    "FIRST_QUARTER": "The first quarter is a time of action and decisions. Energy is strong and dynamic.",
+    "WAXING_GIBBOUS": "The waxing gibbous moon amplifies effects. It's the time of maximum power for treatments.",
+    "FULL": "The full moon brings intense energy but can cause sensitivity. Ideal for relaxation and care.",
+    "WANING_GIBBOUS": "The waning gibbous moon favors release and repair of damage.",
+    "LAST_QUARTER": "The last quarter is perfect for eliminating what's no longer needed, like unwanted hair.",
+    "WANING_CRESCENT": "The waning crescent concludes the cycle. It's time for deep cleaning and reset."
+  },
+  "weekdays": {
+    "short": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "long": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  },
+  "months": {
+    "short": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "long": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  }
+}

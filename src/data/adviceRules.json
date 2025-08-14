@@ -1,0 +1,50 @@
+{
+  "NEW": {
+    "cut": {"score": -1, "title_it": "Rinvia il taglio", "text_it": "I tagli oggi tendono a ricrescere più lentamente.", "title_en": "Delay haircut", "text_en": "Hair may grow back slower today."},
+    "color": {"score": 0, "title_it": "Colore ok", "text_it": "Neutralità: punta a tonalità delicate.", "title_en": "Color ok", "text_en": "Neutral: prefer soft tones."},
+    "wax": {"score": 1, "title_it": "Ceretta favorevole", "text_it": "Ricrescita spesso più lenta.", "title_en": "Waxing favorable", "text_en": "Often slower regrowth."},
+    "treat": {"score": 1, "title_it": "Trattamenti rigeneranti", "text_it": "Ottimo per detox/purificanti.", "title_en": "Regenerating care", "text_en": "Great for detox/purifying."}
+  },
+  "WAXING_CRESCENT": {
+    "cut": {"score": 1, "title_it": "Taglio leggero", "text_it": "Favorisce una ricrescita più rapida e sana.", "title_en": "Light trim", "text_en": "Supports faster, healthier growth."},
+    "color": {"score": 1, "title_it": "Colore brillante", "text_it": "Buon ancoraggio dei pigmenti.", "title_en": "Vibrant color", "text_en": "Good pigment hold."},
+    "wax": {"score": 0, "title_it": "Ceretta neutra", "text_it": "Niente di particolare.", "title_en": "Neutral waxing", "text_en": "Nothing special."},
+    "treat": {"score": 1, "title_it": "Idratazione", "text_it": "Spinta a nutrimento e idratazione.", "title_en": "Hydration", "text_en": "Focus on moisture."}
+  },
+  "FIRST_QUARTER": {
+    "cut": {"score": 2, "title_it": "Taglio consigliato", "text_it": "Ottimo per dare forma.", "title_en": "Cut recommended", "text_en": "Great for shaping."},
+    "color": {"score": 1, "title_it": "Colore ok", "text_it": "Buona tenuta.", "title_en": "Color ok", "text_en": "Good hold."},
+    "wax": {"score": -1, "title_it": "Ceretta sconsigliata", "text_it": "Ricrescita più rapida possibile.", "title_en": "Waxing not ideal", "text_en": "Potentially quicker regrowth."},
+    "treat": {"score": 1, "title_it": "Nutrizione", "text_it": "Maschere nutrienti.", "title_en": "Nutrition", "text_en": "Nourishing masks."}
+  },
+  "WAXING_GIBBOUS": {
+    "cut": {"score": 2, "title_it": "Taglio top", "text_it": "Per volume e vitalità.", "title_en": "Top cut", "text_en": "For volume and vitality."},
+    "color": {"score": 2, "title_it": "Colore top", "text_it": "Massima brillantezza.", "title_en": "Top color", "text_en": "Max shine."},
+    "wax": {"score": -1, "title_it": "Ceretta no", "text_it": "Meglio rimandare.", "title_en": "Skip waxing", "text_en": "Better to postpone."},
+    "treat": {"score": 1, "title_it": "Lucidanti", "text_it": "Trattamenti gloss.", "title_en": "Glossing", "text_en": "Shine boosters."}
+  },
+  "FULL": {
+    "cut": {"score": 0, "title_it": "Taglio neutro", "text_it": "Attenzione al crespo.", "title_en": "Neutral cut", "text_en": "Watch for frizz."},
+    "color": {"score": 1, "title_it": "Colore visibile", "text_it": "Effetto wow, ma cura post-colore.", "title_en": "Showy color", "text_en": "Wow effect; aftercare needed."},
+    "wax": {"score": -2, "title_it": "Ceretta sconsigliata", "text_it": "Possibile sensibilità.", "title_en": "Waxing not recommended", "text_en": "Possible sensitivity."},
+    "treat": {"score": 2, "title_it": "Spa/relax", "text_it": "Maschere lenitive.", "title_en": "Spa/relax", "text_en": "Soothing masks."}
+  },
+  "WANING_GIBBOUS": {
+    "cut": {"score": -1, "title_it": "Taglio non ideale", "text_it": "Meglio rifiniture leggere.", "title_en": "Not ideal cut", "text_en": "Prefer light trims."},
+    "color": {"score": 0, "title_it": "Colore neutro", "text_it": "Toni naturali.", "title_en": "Neutral color", "text_en": "Natural tones."},
+    "wax": {"score": 1, "title_it": "Ceretta ok", "text_it": "Ricrescita moderata.", "title_en": "Waxing ok", "text_en": "Moderate regrowth."},
+    "treat": {"score": 2, "title_it": "Ristrutturazione", "text_it": "Cheratina/bonding.", "title_en": "Repair", "text_en": "Keratin/bonding."}
+  },
+  "LAST_QUARTER": {
+    "cut": {"score": -1, "title_it": "Taglio no", "text_it": "Meglio attendere fase crescente.", "title_en": "Skip cut", "text_en": "Wait for waxing phase."},
+    "color": {"score": -1, "title_it": "Colore no", "text_it": "Tenuta ridotta.", "title_en": "Skip color", "text_en": "Lower hold."},
+    "wax": {"score": 2, "title_it": "Ceretta top", "text_it": "Ottima per ridurre ricrescita.", "title_en": "Top waxing", "text_en": "Great to slow regrowth."},
+    "treat": {"score": 1, "title_it": "Esfoliazione", "text_it": "Scrub/peeling delicato.", "title_en": "Exfoliation", "text_en": "Gentle peeling."}
+  },
+  "WANING_CRESCENT": {
+    "cut": {"score": -1, "title_it": "Rimanda il taglio", "text_it": "Evita cambi drastici.", "title_en": "Delay cut", "text_en": "Avoid big changes."},
+    "color": {"score": 0, "title_it": "Gloss/tono su tono", "text_it": "Ravviva senza stress.", "title_en": "Gloss/toner", "text_en": "Refresh gently."},
+    "wax": {"score": 2, "title_it": "Ceretta consigliata", "text_it": "Ricrescita tendenzialmente lenta.", "title_en": "Waxing recommended", "text_en": "Tends to slower regrowth."},
+    "treat": {"score": 1, "title_it": "Detox cute", "text_it": "Impacchi e oli.", "title_en": "Scalp detox", "text_en": "Wraps and oils."}
+  }
+}
