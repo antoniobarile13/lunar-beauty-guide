@@ -2,6 +2,10 @@ export type MoonPhase =
   | 'NEW' | 'WAXING_CRESCENT' | 'FIRST_QUARTER' | 'WAXING_GIBBOUS'
   | 'FULL' | 'WANING_GIBBOUS' | 'LAST_QUARTER' | 'WANING_CRESCENT';
 
+export type ZodiacSign = 
+  | 'ARIES' | 'TAURUS' | 'GEMINI' | 'CANCER' | 'LEO' | 'VIRGO'
+  | 'LIBRA' | 'SCORPIO' | 'SAGITTARIUS' | 'CAPRICORN' | 'AQUARIUS' | 'PISCES';
+
 export type BeautyCategory = 'cut' | 'color' | 'wax' | 'treat';
 
 export type BadgeType = 'Excellent' | 'Good' | 'Neutral' | 'NotIdeal' | 'Avoid';
@@ -12,6 +16,7 @@ export interface MoonPhaseResult {
   ageDays: number; // 0-29.53
   emoji: string;
   iconName: string;
+  zodiacSign: ZodiacSign;
 }
 
 export interface BeautyAdviceItem {
@@ -27,6 +32,7 @@ export interface DailyAdvice {
   phase: MoonPhase;
   illumination: number;
   ageDays: number;
+  zodiacSign: ZodiacSign;
   bestCategory: BeautyCategory;
   items: Record<BeautyCategory, BeautyAdviceItem>;
 }

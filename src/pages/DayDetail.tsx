@@ -56,6 +56,9 @@ export default function DayDetail() {
               <h2 className="text-2xl font-bold text-foreground mb-2">
                 {t(`phases.${dayAdvice.phase}`)}
               </h2>
+              <p className="text-sm text-lunar-primary font-medium mb-3">
+                Luna in {t(`zodiac.${dayAdvice.zodiacSign}`)}
+              </p>
               <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
                 <span>
                   {t("today.illumination")}: {Math.round(dayAdvice.illumination * 100)}%

@@ -1,8 +1,27 @@
-import { MoonPhase, MoonPhaseResult } from "@/types/lunar";
+import { MoonPhase, MoonPhaseResult, ZodiacSign } from "@/types/lunar";
 
 // Astronomical constants
 const SYNODIC_MONTH = 29.530588; // days
 const KNOWN_NEW_MOON = new Date('2000-01-06T18:14:00Z'); // Known new moon reference
+
+// Calculate moon's zodiac sign based on approximate lunar longitude
+function calculateMoonZodiacSign(date: Date): ZodiacSign {
+  const J2000 = new Date('2000-01-01T12:00:00Z');
+  const daysSinceJ2000 = (date.getTime() - J2000.getTime()) / (1000 * 60 * 60 * 24);
+  
+  // Simplified lunar longitude calculation (moon moves ~13.2° per day)
+  let moonLongitude = (280 + daysSinceJ2000 * 13.176396) % 360;
+  if (moonLongitude < 0) moonLongitude += 360;
+  
+  // Map longitude to zodiac signs (each sign = 30°)
+  const signs: ZodiacSign[] = [
+    'ARIES', 'TAURUS', 'GEMINI', 'CANCER', 'LEO', 'VIRGO',
+    'LIBRA', 'SCORPIO', 'SAGITTARIUS', 'CAPRICORN', 'AQUARIUS', 'PISCES'
+  ];
+  
+  const signIndex = Math.floor(moonLongitude / 30);
+  return signs[signIndex];
+}
 
 // Moon phase emojis and icons
 const MOON_DATA = {
@@ -82,7 +101,8 @@ export function getMoonPhase(dateISO: string, timezone: string = 'Europe/Zurich'
     illumination,
     ageDays: ageInDays,
     emoji: MOON_DATA[phase].emoji,
-    iconName: MOON_DATA[phase].iconName
+    iconName: MOON_DATA[phase].iconName,
+    zodiacSign: calculateMoonZodiacSign(date)
   };
   
   // Cache the result

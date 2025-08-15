@@ -51,6 +51,20 @@
     "LAST_QUARTER": "Ultimo Quarto",
     "WANING_CRESCENT": "Luna Calante"
   },
+  "zodiac": {
+    "ARIES": "Ariete",
+    "TAURUS": "Toro",
+    "GEMINI": "Gemelli",
+    "CANCER": "Cancro",
+    "LEO": "Leone",
+    "VIRGO": "Vergine",
+    "LIBRA": "Bilancia",
+    "SCORPIO": "Scorpione",
+    "SAGITTARIUS": "Sagittario",
+    "CAPRICORN": "Capricorno",
+    "AQUARIUS": "Acquario",
+    "PISCES": "Pesci"
+  },
   "categories": {
     "cut": "Taglio",
     "color": "Colore",

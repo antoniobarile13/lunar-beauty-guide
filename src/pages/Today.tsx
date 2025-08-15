@@ -41,6 +41,9 @@ export default function Today() {
               <h2 className="text-2xl font-bold text-foreground mb-1">
                 {t(`phases.${todayAdvice.phase}`)}
               </h2>
+              <p className="text-sm text-lunar-primary font-medium mb-2">
+                Luna in {t(`zodiac.${todayAdvice.zodiacSign}`)}
+              </p>
               <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
                 <span>
                   {t("today.illumination")}: {Math.round(todayAdvice.illumination * 100)}%

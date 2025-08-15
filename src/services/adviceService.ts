@@ -67,6 +67,7 @@ export function getDailyAdvice(dateISO: string, timezone: string = 'Europe/Zuric
     phase: moonPhase.phase,
     illumination: moonPhase.illumination,
     ageDays: moonPhase.ageDays,
+    zodiacSign: moonPhase.zodiacSign,
     bestCategory,
     items
   };
