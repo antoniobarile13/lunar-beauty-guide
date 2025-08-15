@@ -31,10 +31,10 @@ export function Layout({ children }: LayoutProps) {
                 🌙
               </div>
               <div>
-                <h1 className="text-lg font-semibold text-lunar-primary">
+                <h1 className="text-lg font-semibold text-white">
                   {t("app.title")}
                 </h1>
-                <p className="text-xs text-lunar-glow">
+                <p className="text-xs text-white/80">
                   {t("app.subtitle")}
                 </p>
               </div>

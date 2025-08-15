@@ -81,7 +81,7 @@ export default function Today() {
       {/* Today's Advice Grid */}
       <div>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-foreground">
+          <h2 className="text-xl font-semibold text-white">
             {t("today.todayAdvice")}
           </h2>
           <Button
