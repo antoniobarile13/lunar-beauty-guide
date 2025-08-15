@@ -68,16 +68,16 @@ export default function Calendar() {
           </div>
         </CardHeader>
         <CardContent>
-          <div className="flex items-center justify-between mb-6">
-            <Button variant="ghost" size="sm" onClick={goToPreviousMonth}>
+          <div className="flex items-center justify-between mb-6 gap-2">
+            <Button variant="ghost" size="sm" onClick={goToPreviousMonth} className="shrink-0">
               <ChevronLeft className="w-4 h-4" />
-              {t("calendar.previousMonth")}
+              <span className="hidden sm:inline">{t("calendar.previousMonth")}</span>
             </Button>
-            <h2 className="text-lg font-semibold">
+            <h2 className="text-lg font-semibold text-center flex-1">
               {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()}
             </h2>
-            <Button variant="ghost" size="sm" onClick={goToNextMonth}>
-              {t("calendar.nextMonth")}
+            <Button variant="ghost" size="sm" onClick={goToNextMonth} className="shrink-0">
+              <span className="hidden sm:inline">{t("calendar.nextMonth")}</span>
               <ChevronRight className="w-4 h-4" />
             </Button>
           </div>

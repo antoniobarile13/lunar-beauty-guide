@@ -97,7 +97,7 @@ All colors MUST be HSL.
   .dark {
     /* Dark lunar theme */
     --background: 240 25% 8%;
-    --foreground: 45 85% 90%;
+    --foreground: 45 90% 85%;
 
     --card: 240 20% 12%;
     --card-foreground: 45 85% 90%;
