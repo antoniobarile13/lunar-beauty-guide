@@ -23,7 +23,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-gradient-lunar">
       {/* Header */}
-      <header className="bg-gradient-card/50 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
+      <header className="bg-gradient-card/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -31,10 +31,10 @@ export function Layout({ children }: LayoutProps) {
                 🌙
               </div>
               <div>
-                <h1 className="text-lg font-semibold text-foreground">
+                <h1 className="text-lg font-semibold text-lunar-primary">
                   {t("app.title")}
                 </h1>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-lunar-glow">
                   {t("app.subtitle")}
                 </p>
               </div>
@@ -49,7 +49,7 @@ export function Layout({ children }: LayoutProps) {
       </main>
 
       {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-gradient-card/90 backdrop-blur-sm border-t border-border/50">
+      <nav className="fixed bottom-0 left-0 right-0 bg-gradient-card/95 backdrop-blur-sm border-t border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-around py-2">
             {navItems.map(({ path, icon: Icon, label }) => (
@@ -60,8 +60,8 @@ export function Layout({ children }: LayoutProps) {
                 onClick={() => navigate(path)}
                 className={cn(
                   "flex flex-col items-center gap-1 h-auto py-2 px-3",
-                  "transition-smooth hover:bg-accent/50",
-                  location.pathname === path && "text-lunar-primary bg-accent/30"
+                  "transition-smooth hover:bg-accent/50 text-lunar-primary",
+                  location.pathname === path && "text-lunar-glow bg-accent/30"
                 )}
               >
                 <Icon className="w-5 h-5" />
