@@ -4,6 +4,9 @@ import { Calendar, Home, Settings, List } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
+import { MoonIcon } from "./MoonIcon";
+import { getMoonPhase } from "@/services/moonService";
+import { useAppStore } from "@/store/appStore";
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,6 +16,10 @@ export function Layout({ children }: LayoutProps) {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
+  const { currentDate, settings } = useAppStore();
+  
+  // Get current moon phase for dynamic icon
+  const currentMoonPhase = getMoonPhase(currentDate, settings.timezone);
   
   const navItems = [
     { path: "/", icon: Home, label: t("navigation.today") },
@@ -28,8 +35,12 @@ export function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gradient-glow flex items-center justify-center text-lg shadow-glow">
-                🌙
+              <div className="w-8 h-8 rounded-full bg-gradient-glow flex items-center justify-center shadow-glow">
+                <MoonIcon 
+                  phase={currentMoonPhase.phase} 
+                  size="sm" 
+                  className="text-white drop-shadow-sm"
+                />
               </div>
               <div>
                 <h1 className="text-lg font-semibold text-white">
