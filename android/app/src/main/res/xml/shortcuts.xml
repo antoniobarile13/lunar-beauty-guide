@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="moon_new"
+        android:icon="@mipmap/ic_launcher_new_moon"
+        android:shortcutShortLabel="@string/new_moon_short"
+        android:shortcutLongLabel="@string/new_moon_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="app.lovable.fc533bbff6fb4533be328ab2a33fc420"
+            android:targetClass="app.lovable.fc533bbff6fb4533be328ab2a33fc420.MainActivity"
+            android:data="lunarguide://moon/new" />
+    </shortcut>
+    
+    <shortcut
+        android:shortcutId="moon_waxing_crescent"
+        android:icon="@mipmap/ic_launcher_waxing_crescent"
+        android:shortcutShortLabel="@string/waxing_crescent_short"
+        android:shortcutLongLabel="@string/waxing_crescent_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="app.lovable.fc533bbff6fb4533be328ab2a33fc420"
+            android:targetClass="app.lovable.fc533bbff6fb4533be328ab2a33fc420.MainActivity"
+            android:data="lunarguide://moon/waxing-crescent" />
+    </shortcut>
+    
+    <shortcut
+        android:shortcutId="moon_first_quarter"
+        android:icon="@mipmap/ic_launcher_first_quarter"
+        android:shortcutShortLabel="@string/first_quarter_short"
+        android:shortcutLongLabel="@string/first_quarter_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="app.lovable.fc533bbff6fb4533be328ab2a33fc420"
+            android:targetClass="app.lovable.fc533bbff6fb4533be328ab2a33fc420.MainActivity"
+            android:data="lunarguide://moon/first-quarter" />
+    </shortcut>
+    
+    <shortcut
+        android:shortcutId="moon_waxing_gibbous"
+        android:icon="@mipmap/ic_launcher_waxing_gibbous"
+        android:shortcutShortLabel="@string/waxing_gibbous_short"
+        android:shortcutLongLabel="@string/waxing_gibbous_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="app.lovable.fc533bbff6fb4533be328ab2a33fc420"
+            android:targetClass="app.lovable.fc533bbff6fb4533be328ab2a33fc420.MainActivity"
+            android:data="lunarguide://moon/waxing-gibbous" />
+    </shortcut>
+    
+    <shortcut
+        android:shortcutId="moon_full"
+        android:icon="@mipmap/ic_launcher_full_moon"
+        android:shortcutShortLabel="@string/full_moon_short"
+        android:shortcutLongLabel="@string/full_moon_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="app.lovable.fc533bbff6fb4533be328ab2a33fc420"
+            android:targetClass="app.lovable.fc533bbff6fb4533be328ab2a33fc420.MainActivity"
+            android:data="lunarguide://moon/full" />
+    </shortcut>
+    
+    <shortcut
+        android:shortcutId="moon_waning_gibbous"
+        android:icon="@mipmap/ic_launcher_waning_gibbous"
+        android:shortcutShortLabel="@string/waning_gibbous_short"
+        android:shortcutLongLabel="@string/waning_gibbous_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="app.lovable.fc533bbff6fb4533be328ab2a33fc420"
+            android:targetClass="app.lovable.fc533bbff6fb4533be328ab2a33fc420.MainActivity"
+            android:data="lunarguide://moon/waning-gibbous" />
+    </shortcut>
+    
+    <shortcut
+        android:shortcutId="moon_last_quarter"
+        android:icon="@mipmap/ic_launcher_last_quarter"
+        android:shortcutShortLabel="@string/last_quarter_short"
+        android:shortcutLongLabel="@string/last_quarter_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="app.lovable.fc533bbff6fb4533be328ab2a33fc420"
+            android:targetClass="app.lovable.fc533bbff6fb4533be328ab2a33fc420.MainActivity"
+            android:data="lunarguide://moon/last-quarter" />
+    </shortcut>
+    
+    <shortcut
+        android:shortcutId="moon_waning_crescent"
+        android:icon="@mipmap/ic_launcher_waning_crescent"
+        android:shortcutShortLabel="@string/waning_crescent_short"
+        android:shortcutLongLabel="@string/waning_crescent_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="app.lovable.fc533bbff6fb4533be328ab2a33fc420"
+            android:targetClass="app.lovable.fc533bbff6fb4533be328ab2a33fc420.MainActivity"
+            android:data="lunarguide://moon/waning-crescent" />
+    </shortcut>
+</shortcuts>

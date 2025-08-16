@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lunar Beauty Guide</string>
+    <string name="title_activity_main">Lunar Beauty Guide</string>
+    <string name="package_name">app.lovable.fc533bbff6fb4533be328ab2a33fc420</string>
+    <string name="custom_url_scheme">fc533bbff6fb4533be328ab2a33fc420</string>
+    
+    <!-- Moon Phase Shortcuts -->
+    <string name="new_moon_short">New Moon</string>
+    <string name="new_moon_long">Today is New Moon</string>
+    <string name="waxing_crescent_short">Waxing Crescent</string>
+    <string name="waxing_crescent_long">Today is Waxing Crescent</string>
+    <string name="first_quarter_short">First Quarter</string>
+    <string name="first_quarter_long">Today is First Quarter</string>
+    <string name="waxing_gibbous_short">Waxing Gibbous</string>
+    <string name="waxing_gibbous_long">Today is Waxing Gibbous</string>
+    <string name="full_moon_short">Full Moon</string>
+    <string name="full_moon_long">Today is Full Moon</string>
+    <string name="waning_gibbous_short">Waning Gibbous</string>
+    <string name="waning_gibbous_long">Today is Waning Gibbous</string>
+    <string name="last_quarter_short">Last Quarter</string>
+    <string name="last_quarter_long">Today is Last Quarter</string>
+    <string name="waning_crescent_short">Waning Crescent</string>
+    <string name="waning_crescent_long">Today is Waning Crescent</string>
+</resources>
