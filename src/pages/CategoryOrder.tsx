@@ -155,12 +155,12 @@ export default function CategoryOrder() {
 
         {/* Spiegazione */}
         <Card className="bg-gradient-card/80 backdrop-blur-sm border-border/50">
-          <CardHeader>
+          <CardHeader className="bg-gray-200">
             <CardTitle className="text-foreground">
               {t("categoryOrder.explanationTitle")}
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="bg-yellow-50">
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t(`categoryOrder.explanation.${selectedCategory}`)}
             </p>
