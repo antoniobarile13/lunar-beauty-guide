@@ -112,7 +112,7 @@ export default function CategoryOrder() {
                 </p>
               </CardContent>
             </Card> : favorableDates.map(advice => <Card key={advice.dateISO} className="bg-gradient-card/80 backdrop-blur-sm border-border/50 hover:shadow-soft transition-smooth cursor-pointer" onClick={() => navigate(`/day/${advice.dateISO}`)}>
-                <CardContent className="p-4">
+                <CardContent className="p-4 bg-slate-300">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="text-center">
