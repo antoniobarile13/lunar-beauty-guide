@@ -95,5 +95,28 @@
   "months": {
     "short": ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"],
     "long": ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"]
+  },
+  "categoryOrder": {
+    "title": "Ordine per Tipologia",
+    "subtitle": "Seleziona una tipologia per vedere le date lunari più favorevoli",
+    "back": "Indietro",
+    "favorableDatesFor": "Date favorevoli per {{category}}",
+    "noFavorableDates": "Nessuna data particolarmente favorevole nei prossimi 30 giorni",
+    "score": "Punteggio",
+    "explanationTitle": "Perché queste date?",
+    "howItWorks": "Come funziona",
+    "howItWorksDescription": "L'app analizza le fasi lunari e calcola i momenti più propizi per ogni trattamento di bellezza. Seleziona una categoria per vedere le prossime date consigliate.",
+    "descriptions": {
+      "cut": "Trova i momenti migliori per tagliare i capelli secondo il calendario lunare",
+      "color": "Scopri quando colorare i capelli per risultati ottimali e duraturi", 
+      "wax": "Identifica i giorni ideali per la ceretta e depilazione",
+      "treat": "Pianifica trattamenti viso e corpo nei periodi più efficaci"
+    },
+    "explanation": {
+      "cut": "Il taglio dei capelli durante certe fasi lunari può influenzare la crescita e la salute del capello. Le fasi di luna crescente sono tradizionalmente considerate favorevoli per stimolare una crescita più forte e veloce.",
+      "color": "La colorazione dei capelli beneficia di specifiche energie lunari che possono migliorare l'assorbimento del colore e la durata del risultato. Le fasi indicate favoriscono una migliore presa del pigmento.",
+      "wax": "La depilazione e ceretta durante certe fasi lunari può risultare meno dolorosa e con ricrescita più lenta. I momenti indicati sono tradizionalmente associati a una maggiore efficacia del trattamento.",
+      "treat": "I trattamenti estetici per viso e corpo possono beneficiare delle energie lunari per una migliore penetrazione dei principi attivi e risultati più duraturi. Le date indicate sono quelle più propizie per questi trattamenti."
+    }
   }
 }

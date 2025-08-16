@@ -95,5 +95,28 @@
   "months": {
     "short": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     "long": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  },
+  "categoryOrder": {
+    "title": "Order by Category",
+    "subtitle": "Select a category to see the most favorable lunar dates",
+    "back": "Back",
+    "favorableDatesFor": "Favorable dates for {{category}}",
+    "noFavorableDates": "No particularly favorable dates in the next 30 days",
+    "score": "Score",
+    "explanationTitle": "Why these dates?",
+    "howItWorks": "How it works",
+    "howItWorksDescription": "The app analyzes lunar phases and calculates the most auspicious moments for each beauty treatment. Select a category to see the next recommended dates.",
+    "descriptions": {
+      "cut": "Find the best times to cut your hair according to the lunar calendar",
+      "color": "Discover when to color your hair for optimal and lasting results",
+      "wax": "Identify ideal days for waxing and hair removal",
+      "treat": "Plan facial and body treatments during the most effective periods"
+    },
+    "explanation": {
+      "cut": "Cutting hair during certain lunar phases can influence hair growth and health. Waxing moon phases are traditionally considered favorable for stimulating stronger and faster growth.",
+      "color": "Hair coloring benefits from specific lunar energies that can improve color absorption and result durability. The indicated phases favor better pigment uptake.",
+      "wax": "Hair removal and waxing during certain lunar phases can be less painful with slower regrowth. The indicated times are traditionally associated with greater treatment effectiveness.",
+      "treat": "Aesthetic treatments for face and body can benefit from lunar energies for better penetration of active ingredients and more lasting results. The indicated dates are the most auspicious for these treatments."
+    }
   }
 }

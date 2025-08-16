@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Button } from "./ui/button";
-import { Calendar, Home, Settings } from "lucide-react";
+import { Calendar, Home, Settings, List } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -17,6 +17,7 @@ export function Layout({ children }: LayoutProps) {
   const navItems = [
     { path: "/", icon: Home, label: t("navigation.today") },
     { path: "/calendar", icon: Calendar, label: t("navigation.calendar") },
+    { path: "/category-order", icon: List, label: t("categoryOrder.title") },
     { path: "/settings", icon: Settings, label: t("navigation.settings") }
   ];
   

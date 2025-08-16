@@ -7,6 +7,7 @@ import { Layout } from "@/components/Layout";
 import Today from "./pages/Today";
 import Calendar from "./pages/Calendar";
 import DayDetail from "./pages/DayDetail";
+import CategoryOrder from "./pages/CategoryOrder";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import "@/lib/i18n";
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/" element={<Today />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/day/:date" element={<DayDetail />} />
+            <Route path="/category-order" element={<CategoryOrder />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
