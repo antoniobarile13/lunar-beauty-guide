@@ -9,9 +9,9 @@ interface BeautyBadgeProps {
 
 const badgeStyles = {
   Excellent: "bg-badge-excellent text-white shadow-soft",
-  Good: "bg-badge-good text-secondary shadow-soft",
+  Good: "bg-badge-good text-green-800 shadow-soft",
   Neutral: "bg-badge-neutral text-foreground shadow-soft",
-  NotIdeal: "bg-badge-not-ideal text-white shadow-soft",
+  NotIdeal: "bg-badge-not-ideal text-orange-800 shadow-soft",
   Avoid: "bg-badge-avoid text-white shadow-soft"
 };
 

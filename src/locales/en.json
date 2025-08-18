@@ -97,7 +97,7 @@
     "long": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   },
   "categoryOrder": {
-    "title": "Order by Category",
+    "title": "Filters",
     "subtitle": "Select a category to see the most favorable lunar dates",
     "back": "Back",
     "favorableDatesFor": "Favorable dates for {{category}}",

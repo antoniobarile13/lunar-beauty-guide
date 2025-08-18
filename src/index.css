@@ -18,21 +18,21 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 18%;
 
-    /* Primary pink - sostituisce il blu scuro */
-    --primary: 340 82% 52%;
+    /* Primary purple - soft violet */
+    --primary: 280 38% 44%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary purple - viola più soft */
-    --secondary: 262 52% 47%;
+    /* Secondary purple - medium violet */
+    --secondary: 291 64% 42%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Soft pink per elementi secondari */
-    --muted: 340 67% 92%;
+    /* Soft background elements */
+    --muted: 0 0% 96%;
     --muted-foreground: 0 0% 46%;
 
-    /* Accent coral per successo */
-    --accent: 14 91% 64%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent pink - soft detail color */
+    --accent: 340 58% 75%;
+    --accent-foreground: 0 0% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -43,35 +43,35 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Beauty-specific colors */
-    --lunar-primary: 340 82% 52%;
-    --lunar-glow: 14 91% 64%;
-    --lunar-surface: 340 67% 92%;
-    --lunar-shadow: 262 52% 47%;
+    /* Beauty-specific colors - soft palette */
+    --lunar-primary: 280 38% 44%;
+    --lunar-glow: 340 58% 75%;
+    --lunar-surface: 0 0% 98%;
+    --lunar-shadow: 280 38% 44%;
     
-    /* Beauty category colors - aggiornati */
-    --beauty-cut: 340 82% 52%;
-    --beauty-color: 262 52% 47%;
-    --beauty-wax: 14 91% 64%;
-    --beauty-treat: 340 67% 92%;
+    /* Beauty category colors - updated */
+    --beauty-cut: 280 38% 44%;
+    --beauty-color: 291 64% 42%;
+    --beauty-wax: 340 58% 75%;
+    --beauty-treat: 0 0% 96%;
     
-    /* Badge colors - sistemati per eliminare confusione verde */
-    --badge-excellent: 14 91% 64%;     /* Coral per "Ottimo" */
-    --badge-good: 340 67% 92%;         /* Rosa soft per "Buono" */
-    --badge-neutral: 0 0% 96%;         /* Grigio perla per neutro */
-    --badge-not-ideal: 262 52% 71%;   /* Viola muted per "Sconsigliato" */
-    --badge-avoid: 0 84% 60%;          /* Rosso per "Evitare" */
+    /* Badge colors - green logic with better distinction */
+    --badge-excellent: 122 40% 49%;    /* Medium green for "Ottimo" */
+    --badge-good: 122 32% 74%;         /* Light green for "Buono" - clearly different */
+    --badge-neutral: 0 0% 96%;         /* Pearl gray for neutral */
+    --badge-not-ideal: 36 100% 66%;   /* Soft amber for "Sconsigliato" */
+    --badge-avoid: 0 84% 60%;          /* Red for "Evitare" */
 
-    /* Gradients - beauty palette */
-    --gradient-lunar: linear-gradient(135deg, hsl(340 82% 52%), hsl(262 52% 47%));
-    --gradient-glow: linear-gradient(135deg, hsl(14 91% 64%), hsl(340 67% 92%));
-    --gradient-beauty: linear-gradient(135deg, hsl(340 82% 52%), hsl(262 52% 47%));
+    /* Gradients - soft lavender palette */
+    --gradient-lunar: linear-gradient(135deg, hsl(280 38% 44%), hsl(291 64% 42%));
+    --gradient-glow: linear-gradient(135deg, hsl(280 45% 95%), hsl(249 32% 94%));
+    --gradient-beauty: linear-gradient(135deg, hsl(280 45% 95%), hsl(249 32% 94%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
     
-    /* Shadows - aggiornate */
-    --shadow-lunar: 0 8px 32px hsl(340 82% 52% / 0.15);
-    --shadow-glow: 0 0 30px hsl(14 91% 64% / 0.3);
-    --shadow-soft: 0 4px 20px hsl(0 0% 18% / 0.08);
+    /* Shadows - soft and delicate */
+    --shadow-lunar: 0 4px 20px hsl(280 38% 44% / 0.1);
+    --shadow-glow: 0 0 30px hsl(340 58% 75% / 0.2);
+    --shadow-soft: 0 2px 12px hsl(280 38% 44% / 0.08);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -105,17 +105,17 @@ All colors MUST be HSL.
     --popover: 262 20% 12%;
     --popover-foreground: 340 67% 92%;
 
-    --primary: 340 82% 52%;
+    --primary: 280 38% 44%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 262 52% 47%;
+    --secondary: 291 64% 42%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 262 10% 15%;
     --muted-foreground: 262 10% 60%;
 
-    --accent: 14 91% 64%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 340 58% 75%;
+    --accent-foreground: 0 0% 18%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -125,20 +125,20 @@ All colors MUST be HSL.
     --ring: 340 82% 52%;
     
     /* Dark beauty-specific colors */
-    --lunar-primary: 340 82% 52%;
-    --lunar-glow: 14 91% 64%;
+    --lunar-primary: 280 38% 44%;
+    --lunar-glow: 340 58% 75%;
     --lunar-surface: 262 10% 30%;
     --lunar-shadow: 262 40% 5%;
     
     /* Dark gradients */
-    --gradient-lunar: linear-gradient(135deg, hsl(262 25% 8%), hsl(340 20% 15%));
-    --gradient-glow: linear-gradient(135deg, hsl(14 91% 64%), hsl(340 67% 92%));
+    --gradient-lunar: linear-gradient(135deg, hsl(262 25% 8%), hsl(280 20% 15%));
+    --gradient-glow: linear-gradient(135deg, hsl(280 45% 95%), hsl(249 32% 94%));
     --gradient-card: linear-gradient(145deg, hsl(262 20% 12%), hsl(262 15% 10%));
     
     /* Dark shadows */
-    --shadow-lunar: 0 8px 32px hsl(262 40% 5% / 0.5);
-    --shadow-glow: 0 0 40px hsl(14 91% 64% / 0.2);
-    --shadow-soft: 0 4px 20px hsl(262 25% 8% / 0.3);
+    --shadow-lunar: 0 4px 20px hsl(262 40% 5% / 0.5);
+    --shadow-glow: 0 0 40px hsl(340 58% 75% / 0.2);
+    --shadow-soft: 0 2px 12px hsl(262 25% 8% / 0.3);
   }
 }
 
