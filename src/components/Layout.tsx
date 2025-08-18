@@ -71,15 +71,15 @@ export function Layout({
 
       {/* Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-gradient-card/95 backdrop-blur-sm border-t border-border/50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-around py-2 bg-purple-950">
+        <div className="container mx-auto px-2">
+          <div className="flex items-center justify-around py-1 bg-purple-950">
             {navItems.map(({
             path,
             icon: Icon,
             label
-          }) => <Button key={path} variant="ghost" size="sm" onClick={() => navigate(path)} className={cn("flex flex-col items-center gap-1 h-auto py-2 px-3", "transition-smooth hover:bg-accent/50 text-lunar-primary", location.pathname === path && "text-lunar-glow bg-accent/30")}>
-                <Icon className="w-5 h-5" />
-                <span className="text-xs">{label}</span>
+          }) => <Button key={path} variant="ghost" size="sm" onClick={() => navigate(path)} className={cn("flex flex-col items-center gap-0.5 h-auto py-1 px-2", "transition-smooth hover:bg-white/20 text-white", location.pathname === path && "text-black bg-white/90")}>
+                <Icon className="w-4 h-4" />
+                <span className="text-xs font-bold text-black">{label}</span>
               </Button>)}
           </div>
         </div>
