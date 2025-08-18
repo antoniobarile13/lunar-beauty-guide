@@ -71,7 +71,7 @@ export function Layout({
 
       {/* Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-gradient-card/95 backdrop-blur-sm border-t border-border/50">
-        <div className="container mx-auto px-2">
+        <div className="container mx-auto px-2 bg-purple-950">
           <div className="flex items-center justify-around py-1 bg-purple-950">
             {navItems.map(({
             path,
