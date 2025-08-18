@@ -8,30 +8,29 @@ import { BeautyCard } from "@/components/BeautyCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Star, Calendar } from "lucide-react";
-
 export default function Today() {
-  const { t } = useTranslation();
+  const {
+    t
+  } = useTranslation();
   const navigate = useNavigate();
-  const { settings, setCurrentDate } = useAppStore();
-  
+  const {
+    settings,
+    setCurrentDate
+  } = useAppStore();
+
   // Get today's date and advice
   const today = new Date().toISOString().split('T')[0];
   const todayAdvice = getTodayAdvice(settings.timezone, settings.language);
-  
   useEffect(() => {
     setCurrentDate(today);
   }, [today, setCurrentDate]);
-  
   const handleSeeDetails = () => {
     navigate(`/day/${today}`);
   };
-  
   const handleGoToCalendar = () => {
     navigate('/calendar');
   };
-  
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       {/* Moon Phase Card */}
       <Card className="bg-gradient-card border-border/50 shadow-lunar">
         <CardContent className="p-6">
@@ -61,17 +60,17 @@ export default function Today() {
       {/* Best Advice Card */}
       <Card className="bg-gradient-beauty border-border/50 shadow-glow">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-white">
+          <CardTitle className="flex items-center gap-2 text-gray-800">
             <Star className="w-5 h-5 fill-current" />
             {t("today.bestAdvice")}
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="text-white">
-            <h3 className="font-semibold mb-1">
+            <h3 className="font-semibold mb-1 text-gray-800">
               {todayAdvice.items[todayAdvice.bestCategory].title}
             </h3>
-            <p className="text-white/90 text-sm">
+            <p className="text-sm text-gray-800">
               {todayAdvice.items[todayAdvice.bestCategory].text}
             </p>
           </div>
@@ -84,26 +83,14 @@ export default function Today() {
           <h2 className="text-xl font-semibold text-white">
             {t("today.todayAdvice")}
           </h2>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleSeeDetails}
-            className="gap-2"
-          >
+          <Button variant="outline" size="sm" onClick={handleSeeDetails} className="gap-2">
             {t("today.seeDetails")}
             <ArrowRight className="w-4 h-4" />
           </Button>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {Object.entries(todayAdvice.items).map(([category, advice]) => (
-            <BeautyCard
-              key={category}
-              category={category as any}
-              advice={advice}
-              variant="compact"
-            />
-          ))}
+          {Object.entries(todayAdvice.items).map(([category, advice]) => <BeautyCard key={category} category={category as any} advice={advice} variant="compact" />)}
         </div>
       </div>
 
@@ -117,16 +104,12 @@ export default function Today() {
             <p className="text-sm text-muted-foreground">
               Esplora i consigli per tutti i giorni del mese
             </p>
-            <Button 
-              onClick={handleGoToCalendar}
-              className="bg-lunar-primary hover:bg-lunar-primary/90 text-primary-foreground"
-            >
+            <Button onClick={handleGoToCalendar} className="bg-lunar-primary hover:bg-lunar-primary/90 text-primary-foreground">
               <Calendar className="w-4 h-4 mr-2" />
               Vai al calendario
             </Button>
           </div>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 }
