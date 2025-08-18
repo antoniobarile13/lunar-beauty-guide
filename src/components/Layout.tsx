@@ -77,9 +77,9 @@ export function Layout({
             path,
             icon: Icon,
             label
-          }) => <Button key={path} variant="ghost" size="sm" onClick={() => navigate(path)} className={cn("flex flex-col items-center gap-0.5 h-auto py-1 px-2", "transition-smooth hover:bg-white/20 text-white", location.pathname === path && "text-black bg-white/90")}>
+          }) => <Button key={path} variant="ghost" size="sm" onClick={() => navigate(path)} className={cn("flex flex-col items-center gap-0.5 h-auto py-1 px-2", "transition-smooth hover:bg-white/20 text-white", location.pathname === path && "bg-white/20")}>
                 <Icon className="w-4 h-4" />
-                <span className="text-xs font-bold text-black">{label}</span>
+                <span className="text-xs font-bold text-white">{label}</span>
               </Button>)}
           </div>
         </div>
