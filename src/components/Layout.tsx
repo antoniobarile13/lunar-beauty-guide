@@ -45,7 +45,7 @@ export function Layout({
   return <div className="min-h-screen bg-gradient-lunar">
       {/* Header */}
       <header className="bg-gradient-card/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 bg-purple-950">
+        <div className="container mx-auto px-4 py-4 bg-gradient-lunar">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-gradient-glow flex items-center justify-center shadow-glow">
@@ -71,13 +71,13 @@ export function Layout({
 
       {/* Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-gradient-card/95 backdrop-blur-sm border-t border-border/50">
-        <div className="container mx-auto px-2 bg-purple-950">
-          <div className="flex items-center justify-around py-1 bg-purple-950">
+        <div className="container mx-auto px-2 bg-gradient-lunar">
+          <div className="flex items-center justify-around py-1 bg-gradient-lunar">
             {navItems.map(({
             path,
             icon: Icon,
             label
-          }) => <Button key={path} variant="ghost" size="sm" onClick={() => navigate(path)} className={cn("flex flex-col items-center gap-0.5 h-auto py-1 px-2", "transition-smooth hover:bg-white/20 text-white", location.pathname === path && "bg-white/20")}>
+          }) => <Button key={path} variant="ghost" size="sm" onClick={() => navigate(path)} className={cn("flex flex-col items-center gap-0.5 h-auto py-1 px-2", "transition-smooth hover:bg-primary/20 text-white", location.pathname === path && "bg-primary/30")}>
                 <Icon className="w-4 h-4" />
                 <span className="text-xs font-bold text-white">{label}</span>
               </Button>)}

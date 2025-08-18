@@ -8,70 +8,70 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Lunar color palette */
-    --background: 240 20% 98%;
-    --foreground: 240 15% 15%;
+    /* Beauty-focused color palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 18%;
 
-    --card: 240 25% 97%;
-    --card-foreground: 240 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 18%;
 
-    --popover: 240 25% 97%;
-    --popover-foreground: 240 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 18%;
 
-    /* Deep celestial primary */
-    --primary: 240 40% 25%;
-    --primary-foreground: 45 85% 85%;
+    /* Primary pink - sostituisce il blu scuro */
+    --primary: 340 82% 52%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Soft moon glow secondary */
-    --secondary: 240 25% 94%;
-    --secondary-foreground: 240 15% 15%;
+    /* Secondary purple - viola più soft */
+    --secondary: 262 52% 47%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Lunar muted tones */
-    --muted: 240 20% 93%;
-    --muted-foreground: 240 10% 50%;
+    /* Soft pink per elementi secondari */
+    --muted: 340 67% 92%;
+    --muted-foreground: 0 0% 46%;
 
-    /* Beauty accent - soft rose gold */
-    --accent: 20 30% 88%;
-    --accent-foreground: 240 15% 15%;
+    /* Accent coral per successo */
+    --accent: 14 91% 64%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 15% 88%;
-    --input: 240 15% 88%;
-    --ring: 240 40% 25%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 340 82% 52%;
 
     --radius: 0.75rem;
 
-    /* Lunar-specific colors */
-    --lunar-primary: 240 40% 25%;
-    --lunar-glow: 45 85% 75%;
-    --lunar-surface: 220 15% 85%;
-    --lunar-shadow: 240 30% 20%;
+    /* Beauty-specific colors */
+    --lunar-primary: 340 82% 52%;
+    --lunar-glow: 14 91% 64%;
+    --lunar-surface: 340 67% 92%;
+    --lunar-shadow: 262 52% 47%;
     
-    /* Beauty category colors */
-    --beauty-cut: 280 35% 65%;
-    --beauty-color: 330 40% 70%;
-    --beauty-wax: 200 35% 65%;
-    --beauty-treat: 150 35% 65%;
+    /* Beauty category colors - aggiornati */
+    --beauty-cut: 340 82% 52%;
+    --beauty-color: 262 52% 47%;
+    --beauty-wax: 14 91% 64%;
+    --beauty-treat: 340 67% 92%;
     
-    /* Badge colors */
-    --badge-excellent: 120 45% 55%;
-    --badge-good: 160 35% 60%;
-    --badge-neutral: 45 30% 65%;
-    --badge-not-ideal: 30 45% 60%;
-    --badge-avoid: 0 45% 60%;
+    /* Badge colors - sistemati per eliminare confusione verde */
+    --badge-excellent: 14 91% 64%;     /* Coral per "Ottimo" */
+    --badge-good: 340 67% 92%;         /* Rosa soft per "Buono" */
+    --badge-neutral: 0 0% 96%;         /* Grigio perla per neutro */
+    --badge-not-ideal: 262 52% 71%;   /* Viola muted per "Sconsigliato" */
+    --badge-avoid: 0 84% 60%;          /* Rosso per "Evitare" */
 
-    /* Gradients */
-    --gradient-lunar: linear-gradient(135deg, hsl(240 40% 25%), hsl(260 35% 35%));
-    --gradient-glow: linear-gradient(135deg, hsl(45 85% 75%), hsl(55 80% 80%));
-    --gradient-beauty: linear-gradient(135deg, hsl(280 35% 65%), hsl(330 40% 70%));
-    --gradient-card: linear-gradient(145deg, hsl(240 25% 97%), hsl(240 20% 95%));
+    /* Gradients - beauty palette */
+    --gradient-lunar: linear-gradient(135deg, hsl(340 82% 52%), hsl(262 52% 47%));
+    --gradient-glow: linear-gradient(135deg, hsl(14 91% 64%), hsl(340 67% 92%));
+    --gradient-beauty: linear-gradient(135deg, hsl(340 82% 52%), hsl(262 52% 47%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
     
-    /* Shadows */
-    --shadow-lunar: 0 8px 32px hsl(240 40% 25% / 0.15);
-    --shadow-glow: 0 0 30px hsl(45 85% 75% / 0.3);
-    --shadow-soft: 0 4px 20px hsl(240 15% 15% / 0.08);
+    /* Shadows - aggiornate */
+    --shadow-lunar: 0 8px 32px hsl(340 82% 52% / 0.15);
+    --shadow-glow: 0 0 30px hsl(14 91% 64% / 0.3);
+    --shadow-soft: 0 4px 20px hsl(0 0% 18% / 0.08);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -95,50 +95,50 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark lunar theme */
-    --background: 240 25% 8%;
-    --foreground: 45 90% 85%;
+    /* Dark beauty theme */
+    --background: 262 25% 8%;
+    --foreground: 340 67% 92%;
 
-    --card: 240 20% 12%;
-    --card-foreground: 45 85% 90%;
+    --card: 262 20% 12%;
+    --card-foreground: 340 67% 92%;
 
-    --popover: 240 20% 12%;
-    --popover-foreground: 45 85% 90%;
+    --popover: 262 20% 12%;
+    --popover-foreground: 340 67% 92%;
 
-    --primary: 45 85% 75%;
-    --primary-foreground: 240 25% 8%;
+    --primary: 340 82% 52%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 15% 18%;
-    --secondary-foreground: 45 85% 90%;
+    --secondary: 262 52% 47%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 10% 15%;
-    --muted-foreground: 240 10% 60%;
+    --muted: 262 10% 15%;
+    --muted-foreground: 262 10% 60%;
 
-    --accent: 20 25% 25%;
-    --accent-foreground: 45 85% 90%;
+    --accent: 14 91% 64%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 15% 20%;
-    --input: 240 15% 20%;
-    --ring: 45 85% 75%;
+    --border: 262 15% 20%;
+    --input: 262 15% 20%;
+    --ring: 340 82% 52%;
     
-    /* Dark lunar-specific colors */
-    --lunar-primary: 45 85% 75%;
-    --lunar-glow: 45 85% 85%;
-    --lunar-surface: 240 10% 30%;
-    --lunar-shadow: 240 40% 5%;
+    /* Dark beauty-specific colors */
+    --lunar-primary: 340 82% 52%;
+    --lunar-glow: 14 91% 64%;
+    --lunar-surface: 262 10% 30%;
+    --lunar-shadow: 262 40% 5%;
     
     /* Dark gradients */
-    --gradient-lunar: linear-gradient(135deg, hsl(240 25% 8%), hsl(260 20% 15%));
-    --gradient-glow: linear-gradient(135deg, hsl(45 85% 75%), hsl(55 80% 80%));
-    --gradient-card: linear-gradient(145deg, hsl(240 20% 12%), hsl(240 15% 10%));
+    --gradient-lunar: linear-gradient(135deg, hsl(262 25% 8%), hsl(340 20% 15%));
+    --gradient-glow: linear-gradient(135deg, hsl(14 91% 64%), hsl(340 67% 92%));
+    --gradient-card: linear-gradient(145deg, hsl(262 20% 12%), hsl(262 15% 10%));
     
     /* Dark shadows */
-    --shadow-lunar: 0 8px 32px hsl(240 40% 5% / 0.5);
-    --shadow-glow: 0 0 40px hsl(45 85% 75% / 0.2);
-    --shadow-soft: 0 4px 20px hsl(240 25% 8% / 0.3);
+    --shadow-lunar: 0 8px 32px hsl(262 40% 5% / 0.5);
+    --shadow-glow: 0 0 40px hsl(14 91% 64% / 0.2);
+    --shadow-soft: 0 4px 20px hsl(262 25% 8% / 0.3);
   }
 }
 
