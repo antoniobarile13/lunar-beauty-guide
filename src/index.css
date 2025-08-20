@@ -62,6 +62,13 @@ All colors MUST be HSL.
     --badge-not-ideal: 36 100% 66%;   /* Soft amber for "Sconsigliato" */
     --badge-avoid: 0 84% 60%;          /* Red for "Evitare" */
 
+    /* Advice card backgrounds - solid colors based on advice level */
+    --advice-excellent: 122 25% 97%;   /* Very light green background */
+    --advice-good: 122 15% 98%;        /* Subtle green tint */
+    --advice-neutral: 0 0% 99%;        /* Almost white */
+    --advice-not-ideal: 36 30% 97%;    /* Very light amber background */
+    --advice-avoid: 0 25% 97%;         /* Very light red background */
+
     /* Gradients - soft lavender palette */
     --gradient-lunar: linear-gradient(135deg, hsl(280 38% 44%), hsl(291 64% 42%));
     --gradient-glow: linear-gradient(135deg, hsl(280 45% 95%), hsl(249 32% 94%));

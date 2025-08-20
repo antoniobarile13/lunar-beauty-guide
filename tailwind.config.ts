@@ -80,6 +80,13 @@ export default {
 					neutral: 'hsl(var(--badge-neutral))',
 					'not-ideal': 'hsl(var(--badge-not-ideal))',
 					avoid: 'hsl(var(--badge-avoid))'
+				},
+				advice: {
+					excellent: 'hsl(var(--advice-excellent))',
+					good: 'hsl(var(--advice-good))',
+					neutral: 'hsl(var(--advice-neutral))',
+					'not-ideal': 'hsl(var(--advice-not-ideal))',
+					avoid: 'hsl(var(--advice-avoid))'
 				}
 			},
 			backgroundImage: {

@@ -19,11 +19,12 @@ const categoryIcons = {
   treat: Sparkles
 };
 
-const categoryColors = {
-  cut: "beauty-cut",
-  color: "beauty-color", 
-  wax: "beauty-wax",
-  treat: "beauty-treat"
+const adviceBackgrounds = {
+  Excellent: "bg-advice-excellent border-badge-excellent/20",
+  Good: "bg-advice-good border-badge-good/20",
+  Neutral: "bg-advice-neutral border-border/50",
+  NotIdeal: "bg-advice-not-ideal border-badge-not-ideal/20",
+  Avoid: "bg-advice-avoid border-badge-avoid/20"
 };
 
 export function BeautyCard({ category, advice, variant = "default", className }: BeautyCardProps) {
@@ -32,7 +33,8 @@ export function BeautyCard({ category, advice, variant = "default", className }:
   
   return (
     <Card className={cn(
-      "bg-white border-border/50 shadow-soft transition-smooth hover:shadow-lunar",
+      "shadow-soft transition-smooth hover:shadow-lunar",
+      adviceBackgrounds[advice.badge],
       variant === "compact" && "p-3",
       className
     )}>

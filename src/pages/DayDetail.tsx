@@ -102,7 +102,7 @@ export default function DayDetail() {
               advice={advice}
               className={
                 category === dayAdvice.bestCategory 
-                  ? "ring-2 ring-lunar-primary/30 bg-gradient-beauty/5" 
+                  ? "ring-2 ring-lunar-primary/50 shadow-lunar" 
                   : ""
               }
             />
