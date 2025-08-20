@@ -194,7 +194,7 @@ export default function CategoryOrder() {
               <CardContent className="p-6 bg-slate-50">
                 <div className="flex items-center gap-4">
                   <div className={cn("w-16 h-16 rounded-xl flex items-center justify-center transition-smooth group-hover:scale-110", "bg-beauty-cut/10")}>
-                    <Icon className={cn("w-8 h-8", categoryData.color)} />
+                    <Icon className={cn("w-8 h-8", categoryData.category === 'treat' ? "text-yellow-500 stroke-black stroke-1" : categoryData.color)} />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-foreground mb-1">
