@@ -45,7 +45,7 @@ export function BeautyCard({ category, advice, variant = "default", className }:
             "p-1.5 rounded-lg",
             `bg-${categoryColors[category]}/10 text-${categoryColors[category]}`
           )}>
-            <Icon className="w-4 h-4" />
+            <Icon className="w-4 h-4 text-yellow-500 drop-shadow-[0_0_1px_black]" />
           </div>
           <span>{t(`categories.${category}`)}</span>
           <BeautyBadge type={advice.badge} className="ml-auto" />
