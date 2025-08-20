@@ -193,8 +193,8 @@ export default function CategoryOrder() {
         return <Card key={categoryData.category} className="bg-gradient-card/80 backdrop-blur-sm border-border/50 hover:shadow-soft transition-smooth cursor-pointer group" onClick={() => handleCategorySelect(categoryData.category)}>
               <CardContent className="p-6 bg-slate-50">
                 <div className="flex items-center gap-4">
-                  <div className={cn("w-16 h-16 rounded-xl flex items-center justify-center transition-smooth group-hover:scale-110", "bg-beauty-cut/10")}>
-                    <Icon className={cn("w-8 h-8", categoryData.category === 'treat' ? "text-yellow-500 stroke-black stroke-1" : categoryData.color)} />
+                  <div className={cn("w-16 h-16 rounded-xl flex items-center justify-center transition-smooth group-hover:scale-110", categoryData.bgColor)}>
+                    <Icon className={cn("w-8 h-8", categoryData.color)} />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-foreground mb-1">
@@ -212,7 +212,7 @@ export default function CategoryOrder() {
 
       {/* Info card */}
       <Card className="bg-gradient-card/80 backdrop-blur-sm border-border/50">
-        <CardContent className="p-6 bg-gray-300">
+        <CardContent className="p-6 bg-gray-300 rounded-2xl">
           <div className="flex items-start gap-3">
             <div className="w-8 h-8 rounded-full bg-lunar-glow/20 flex items-center justify-center flex-shrink-0 mt-1">
               🌙
