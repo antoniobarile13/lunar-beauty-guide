@@ -191,7 +191,7 @@ export default function CategoryOrder() {
         {categories.map(categoryData => {
         const Icon = categoryData.icon;
         return <Card key={categoryData.category} className="bg-gradient-card/80 backdrop-blur-sm border-border/50 hover:shadow-soft transition-smooth cursor-pointer group" onClick={() => handleCategorySelect(categoryData.category)}>
-              <CardContent className="p-6 bg-slate-50">
+              <CardContent className="p-6 bg-slate-50 rounded-2xl">
                 <div className="flex items-center gap-4">
                   <div className={cn("w-16 h-16 rounded-xl flex items-center justify-center transition-smooth group-hover:scale-110", categoryData.bgColor)}>
                     <Icon className={cn("w-8 h-8", categoryData.color)} />
