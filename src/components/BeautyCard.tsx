@@ -41,10 +41,7 @@ export function BeautyCard({ category, advice, variant = "default", className }:
         variant === "compact" && "pb-2 pt-0"
       )}>
         <CardTitle className="flex items-center gap-2 text-sm font-medium">
-          <div className={cn(
-            "p-1.5 rounded-lg",
-            `bg-${categoryColors[category]}/10 text-${categoryColors[category]}`
-          )}>
+          <div className="p-1.5 rounded-lg bg-white">
             <Icon className="w-4 h-4 text-yellow-500 drop-shadow-[0_0_1px_black]" />
           </div>
           <span>{t(`categories.${category}`)}</span>
