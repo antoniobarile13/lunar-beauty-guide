@@ -32,7 +32,7 @@ export function BeautyCard({ category, advice, variant = "default", className }:
   
   return (
     <Card className={cn(
-      "bg-gradient-card border-border/50 shadow-soft transition-smooth hover:shadow-lunar",
+      "bg-white border-border/50 shadow-soft transition-smooth hover:shadow-lunar",
       variant === "compact" && "p-3",
       className
     )}>
