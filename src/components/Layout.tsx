@@ -7,6 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { MoonIcon } from "./MoonIcon";
 import { getMoonPhase } from "@/services/moonService";
 import { useAppStore } from "@/store/appStore";
+import { TwinklingStars } from "./TwinklingStars";
 interface LayoutProps {
   children: ReactNode;
 }
@@ -42,7 +43,9 @@ export function Layout({
     icon: Settings,
     label: t("navigation.settings")
   }];
-  return <div className="min-h-screen bg-gradient-lunar">
+  return <div className="min-h-screen bg-gradient-lunar relative">
+      {/* Twinkling Stars Background */}
+      <TwinklingStars />
       {/* Header */}
       <header className="bg-gradient-card/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 bg-gradient-lunar">
