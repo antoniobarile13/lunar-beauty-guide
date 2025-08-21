@@ -60,7 +60,7 @@ export default function Today() {
       {/* Best Advice Card */}
       <Card className="bg-gradient-beauty border-border/50 shadow-glow">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-gray-800">
+          <CardTitle className="flex items-center gap-2 text-yellow-500 text-base font-bold">
             <Star className="w-5 h-5 fill-current" />
             {t("today.bestAdvice")}
           </CardTitle>
