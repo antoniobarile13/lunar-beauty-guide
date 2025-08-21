@@ -135,12 +135,29 @@ export default {
 						opacity: '1',
 						transform: 'scale(1.2)'
 					}
+				},
+				'float-across': {
+					'0%': {
+						transform: 'translateX(-100px) translateY(0px)',
+						opacity: '0'
+					},
+					'10%': {
+						opacity: '0.4'
+					},
+					'90%': {
+						opacity: '0.4'
+					},
+					'100%': {
+						transform: 'translateX(calc(100vw + 100px)) translateY(-20px)',
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'twinkle': 'twinkle 3s ease-in-out infinite'
+				'twinkle': 'twinkle 3s ease-in-out infinite',
+				'float-across': 'float-across linear infinite'
 			}
 		}
 	},
