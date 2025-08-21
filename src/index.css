@@ -149,6 +149,36 @@ All colors MUST be HSL.
   }
 }
 
+/* Safe Area Insets for Mobile Devices */
+.safe-area-layout {
+  /* Ensure the entire app respects safe areas */
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
+}
+
+.safe-area-top {
+  /* Add padding for status bar on top */
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  /* Add padding for main content to avoid bottom navigation */
+  padding-bottom: calc(env(safe-area-inset-bottom) + 6rem); /* 6rem = 96px for bottom nav */
+}
+
+.safe-area-bottom-nav {
+  /* Position bottom navigation above system navigation */
+  bottom: env(safe-area-inset-bottom);
+}
+
+/* Ensure viewport meta tag behavior */
+@supports (-webkit-touch-callout: none) {
+  /* iOS specific adjustments */
+  .safe-area-layout {
+    min-height: -webkit-fill-available;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

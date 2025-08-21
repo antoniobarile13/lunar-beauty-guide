@@ -43,11 +43,11 @@ export function Layout({
     icon: Settings,
     label: t("navigation.settings")
   }];
-  return <div className="min-h-screen bg-gradient-lunar relative">
+  return <div className="min-h-screen bg-gradient-lunar relative safe-area-layout">
       {/* Twinkling Stars Background */}
       <TwinklingStars />
       {/* Header */}
-      <header className="bg-gradient-card/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
+      <header className="bg-gradient-card/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50 safe-area-top">
         <div className="container mx-auto px-4 py-4 bg-gradient-lunar">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -68,12 +68,12 @@ export function Layout({
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-6 pb-24">
+      <main className="container mx-auto px-4 py-6 safe-area-bottom">
         {children}
       </main>
 
       {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-gradient-card/95 backdrop-blur-sm border-t border-border/50">
+      <nav className="fixed bottom-0 left-0 right-0 bg-gradient-card/95 backdrop-blur-sm border-t border-border/50 safe-area-bottom-nav">
         <div className="container mx-auto px-2 bg-gradient-lunar">
           <div className="flex items-center justify-around py-1 bg-gradient-lunar">
             {navItems.map(({
