@@ -106,20 +106,6 @@ export default function Calendar() {
       </Card>
       
       {/* Legend */}
-      <Card className="bg-gradient-card border-border/50 shadow-soft">
-        <CardContent className="p-4">
-          <h3 className="font-medium mb-3 text-foreground">Legenda</h3>
-          <div className="flex flex-wrap gap-2">
-            <BeautyBadge type="Excellent" />
-            <BeautyBadge type="Good" />
-            <BeautyBadge type="Neutral" />
-            <BeautyBadge type="NotIdeal" />
-            <BeautyBadge type="Avoid" />
-          </div>
-          <p className="text-xs text-muted-foreground mt-2">
-            Il pallino colorato indica il miglior consiglio del giorno
-          </p>
-        </CardContent>
-      </Card>
+      
     </div>;
 }
