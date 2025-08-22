@@ -1,18 +1,18 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.antoniobarile.lunarbeautyguide',
   appName: 'Lunar Beauty Guide',
   webDir: 'dist',
   server: {
-    androidScheme: 'https',
-    allowNavigation: ['*'],
-    cleartext: true
+    androidScheme: 'https'
   },
-  android: {
-    allowMixedContent: true,
-    captureInput: true,
-    webContentsDebuggingEnabled: true
+  plugins: {
+    StatusBar: {
+      style: 'default', // Si adatta automaticamente al tema del sistema
+      backgroundColor: 'transparent', // Trasparente per seguire il tema
+      overlay: false // Non sovrapporre il contenuto
+    }
   }
 };
 

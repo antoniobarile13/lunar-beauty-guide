@@ -188,3 +188,33 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Fix per Android - Safe Areas con valori fissi */
+@media screen and (max-width: 768px) {
+  .safe-area-top {
+    padding-top: 44px !important; /* Altezza fissa per status bar Android */
+  }
+
+  .safe-area-bottom {
+    padding-bottom: 120px !important; /* Spazio per navigation bar + system nav */
+  }
+
+  .safe-area-bottom-nav {
+    bottom: 24px !important; /* Posiziona sopra system navigation */
+  }
+}
+
+/* Per dispositivi con notch/dynamic island */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .safe-area-top {
+    padding-top: max(env(safe-area-inset-top), 44px) !important;
+  }
+
+  .safe-area-bottom {
+    padding-bottom: max(calc(env(safe-area-inset-bottom) + 6rem), 120px) !important;
+  }
+
+  .safe-area-bottom-nav {
+    bottom: max(env(safe-area-inset-bottom), 24px) !important;
+  }
+}
