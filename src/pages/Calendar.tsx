@@ -9,15 +9,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-
 export default function Calendar() {
-  const { t } = useTranslation();
+  const {
+    t
+  } = useTranslation();
   const navigate = useNavigate();
-  const { settings } = useAppStore();
-  
+  const {
+    settings
+  } = useAppStore();
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const today = new Date().toISOString().split('T')[0];
-  
+
   // Generate calendar data for current month
   const startOfMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 1);
   const endOfMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 0);
@@ -25,35 +27,27 @@ export default function Calendar() {
   startDate.setDate(startDate.getDate() - startOfMonth.getDay()); // Start from Sunday
   const endDate = new Date(endOfMonth);
   endDate.setDate(endDate.getDate() + (6 - endOfMonth.getDay())); // End on Saturday
-  
-  const calendarAdvice = generateDailyAdviceRange(
-    startDate.toISOString().split('T')[0],
-    endDate.toISOString().split('T')[0],
-    settings.timezone,
-    settings.language
-  );
-  
-  const monthNames = t("months.long", { returnObjects: true }) as string[];
-  const weekdays = t("weekdays.short", { returnObjects: true }) as string[];
-  
+
+  const calendarAdvice = generateDailyAdviceRange(startDate.toISOString().split('T')[0], endDate.toISOString().split('T')[0], settings.timezone, settings.language);
+  const monthNames = t("months.long", {
+    returnObjects: true
+  }) as string[];
+  const weekdays = t("weekdays.short", {
+    returnObjects: true
+  }) as string[];
   const goToPreviousMonth = () => {
     setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1));
   };
-  
   const goToNextMonth = () => {
     setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1));
   };
-  
   const goToToday = () => {
     setCurrentMonth(new Date());
   };
-  
   const handleDayClick = (dateISO: string) => {
     navigate(`/day/${dateISO}`);
   };
-  
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       {/* Calendar Header */}
       <Card className="bg-gradient-card border-border/50 shadow-soft">
         <CardHeader>
@@ -84,57 +78,29 @@ export default function Calendar() {
           
           {/* Weekday Headers */}
           <div className="grid grid-cols-7 gap-1 mb-2">
-            {weekdays.map((day) => (
-              <div key={day} className="p-2 text-center text-xs font-medium text-muted-foreground">
+            {weekdays.map(day => <div key={day} className="p-2 text-center text-xs font-medium text-muted-foreground">
                 {day}
-              </div>
-            ))}
+              </div>)}
           </div>
           
           {/* Calendar Grid */}
           <div className="grid grid-cols-7 gap-1">
-            {calendarAdvice.map((dayAdvice) => {
-              const date = new Date(dayAdvice.dateISO);
-              const isCurrentMonth = date.getMonth() === currentMonth.getMonth();
-              const isToday = dayAdvice.dateISO === today;
-              const dayNumber = date.getDate();
-              
-              return (
-                <button
-                  key={dayAdvice.dateISO}
-                  onClick={() => handleDayClick(dayAdvice.dateISO)}
-                  className={cn(
-                    "p-2 rounded-lg border transition-smooth hover:shadow-soft",
-                    "flex flex-col items-center gap-1 min-h-[60px]",
-                    isCurrentMonth 
-                      ? "bg-card border-border/50 hover:bg-accent/50" 
-                      : "bg-muted/30 border-border/20 text-muted-foreground",
-                    isToday && "ring-2 ring-lunar-primary bg-accent"
-                  )}
-                >
-                  <span className={cn(
-                    "text-sm font-medium",
-                    isToday && "text-lunar-primary font-bold"
-                  )}>
+            {calendarAdvice.map(dayAdvice => {
+            const date = new Date(dayAdvice.dateISO);
+            const isCurrentMonth = date.getMonth() === currentMonth.getMonth();
+            const isToday = dayAdvice.dateISO === today;
+            const dayNumber = date.getDate();
+            return <button key={dayAdvice.dateISO} onClick={() => handleDayClick(dayAdvice.dateISO)} className={cn("p-2 rounded-lg border transition-smooth hover:shadow-soft", "flex flex-col items-center gap-1 min-h-[60px]", isCurrentMonth ? "bg-card border-border/50 hover:bg-accent/50" : "bg-muted/30 border-border/20 text-muted-foreground", isToday && "ring-2 ring-lunar-primary bg-accent")}>
+                  <span className={cn("text-sm font-medium", isToday && "text-lunar-primary font-bold")}>
                     {dayNumber}
                   </span>
                   
-                  {isCurrentMonth && (
-                    <>
+                  {isCurrentMonth && <>
                       <MoonIcon phase={dayAdvice.phase} size="sm" />
-                      <div className="w-2 h-2 rounded-full" style={{
-                        backgroundColor: 
-                          dayAdvice.items[dayAdvice.bestCategory].badge === 'Excellent' ? 'hsl(120 45% 55%)' :
-                          dayAdvice.items[dayAdvice.bestCategory].badge === 'Good' ? 'hsl(160 35% 60%)' :
-                          dayAdvice.items[dayAdvice.bestCategory].badge === 'Neutral' ? 'hsl(45 30% 65%)' :
-                          dayAdvice.items[dayAdvice.bestCategory].badge === 'NotIdeal' ? 'hsl(30 45% 60%)' :
-                          'hsl(0 45% 60%)'
-                      }} />
-                    </>
-                  )}
-                </button>
-              );
-            })}
+                      
+                    </>}
+                </button>;
+          })}
           </div>
         </CardContent>
       </Card>
@@ -155,6 +121,5 @@ export default function Calendar() {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 }
