@@ -9,9 +9,9 @@ const config: CapacitorConfig = {
   },
   plugins: {
     StatusBar: {
-      style: 'default', // Si adatta automaticamente al tema del sistema
-      backgroundColor: 'transparent', // Trasparente per seguire il tema
-      overlay: false // Non sovrapporre il contenuto
+      style: 'light',
+      backgroundColor: '#8B5AA6',
+      overlay: false
     }
   }
 };

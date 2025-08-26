@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lunar Beauty Design System - All colors, gradients, fonts, etc defined here. 
+/* Lunar Beauty Design System - All colors, gradients, fonts, etc defined here.
 All colors MUST be HSL.
 */
 
@@ -48,13 +48,13 @@ All colors MUST be HSL.
     --lunar-glow: 340 58% 75%;
     --lunar-surface: 0 0% 98%;
     --lunar-shadow: 280 38% 44%;
-    
+
     /* Beauty category colors - updated */
     --beauty-cut: 280 38% 44%;
     --beauty-color: 291 64% 42%;
     --beauty-wax: 340 58% 75%;
     --beauty-treat: 0 0% 96%;
-    
+
     /* Badge colors - green logic with better distinction */
     --badge-excellent: 122 40% 49%;    /* Medium green for "Ottimo" */
     --badge-good: 122 32% 74%;         /* Light green for "Buono" - clearly different */
@@ -74,12 +74,12 @@ All colors MUST be HSL.
     --gradient-glow: linear-gradient(135deg, hsl(280 45% 95%), hsl(249 32% 94%));
     --gradient-beauty: linear-gradient(135deg, hsl(280 45% 95%), hsl(249 32% 94%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
-    
+
     /* Shadows - soft and delicate */
     --shadow-lunar: 0 4px 20px hsl(280 38% 44% / 0.1);
     --shadow-glow: 0 0 30px hsl(340 58% 75% / 0.2);
     --shadow-soft: 0 2px 12px hsl(280 38% 44% / 0.08);
-    
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -130,18 +130,18 @@ All colors MUST be HSL.
     --border: 262 15% 20%;
     --input: 262 15% 20%;
     --ring: 340 82% 52%;
-    
+
     /* Dark beauty-specific colors */
     --lunar-primary: 280 38% 44%;
     --lunar-glow: 340 58% 75%;
     --lunar-surface: 262 10% 30%;
     --lunar-shadow: 262 40% 5%;
-    
+
     /* Dark gradients */
     --gradient-lunar: linear-gradient(135deg, hsl(262 25% 8%), hsl(280 20% 15%));
     --gradient-glow: linear-gradient(135deg, hsl(280 45% 95%), hsl(249 32% 94%));
     --gradient-card: linear-gradient(145deg, hsl(262 20% 12%), hsl(262 15% 10%));
-    
+
     /* Dark shadows */
     --shadow-lunar: 0 4px 20px hsl(262 40% 5% / 0.5);
     --shadow-glow: 0 0 40px hsl(340 58% 75% / 0.2);
@@ -149,72 +149,26 @@ All colors MUST be HSL.
   }
 }
 
-/* Safe Area Insets for Mobile Devices */
-.safe-area-layout {
-  /* Ensure the entire app respects safe areas */
-  min-height: 100vh;
-  min-height: 100dvh; /* Dynamic viewport height for mobile */
-}
-
-.safe-area-top {
-  /* Add padding for status bar on top */
-  padding-top: env(safe-area-inset-top);
-}
-
-.safe-area-bottom {
-  /* Add padding for main content to avoid bottom navigation */
-  padding-bottom: calc(env(safe-area-inset-bottom) + 6rem); /* 6rem = 96px for bottom nav */
-}
-
-.safe-area-bottom-nav {
-  /* Position bottom navigation above system navigation */
-  bottom: env(safe-area-inset-bottom);
-}
-
-/* Ensure viewport meta tag behavior */
-@supports (-webkit-touch-callout: none) {
-  /* iOS specific adjustments */
-  .safe-area-layout {
-    min-height: -webkit-fill-available;
-  }
-}
-
+/* Basic reset for mobile compatibility */
 @layer base {
   * {
     @apply border-border;
   }
 
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
-}
 
-/* Fix per Android - Safe Areas con valori fissi */
-@media screen and (max-width: 768px) {
-  .safe-area-top {
-    padding-top: 44px !important; /* Altezza fissa per status bar Android */
-  }
-
-  .safe-area-bottom {
-    padding-bottom: 120px !important; /* Spazio per navigation bar + system nav */
-  }
-
-  .safe-area-bottom-nav {
-    bottom: 24px !important; /* Posiziona sopra system navigation */
-  }
-}
-
-/* Per dispositivi con notch/dynamic island */
-@supports (padding-top: env(safe-area-inset-top)) {
-  .safe-area-top {
-    padding-top: max(env(safe-area-inset-top), 44px) !important;
-  }
-
-  .safe-area-bottom {
-    padding-bottom: max(calc(env(safe-area-inset-bottom) + 6rem), 120px) !important;
-  }
-
-  .safe-area-bottom-nav {
-    bottom: max(env(safe-area-inset-bottom), 24px) !important;
+  /* Fix per il problema dello spazio viola */
+  #root {
+    margin: 0;
+    padding: 0;
   }
 }

@@ -12,19 +12,31 @@ import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import "@/lib/i18n";
 import { useEffect } from "react";
-import { StatusBar } from '@capacitor/status-bar';
 import { Capacitor } from '@capacitor/core';
+import { StatusBar, Style } from '@capacitor/status-bar';
 
 const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    if (Capacitor.isNativePlatform()) {
-      StatusBar.setStyle({ style: 'default' });
-      if (Capacitor.getPlatform() === 'android') {
-        StatusBar.setBackgroundColor({ color: '#00000000' });
+    const setupNativeApp = async () => {
+      if (Capacitor.isNativePlatform()) {
+        // Solo configurazione status bar semplice
+        await StatusBar.setStyle({
+          style: Style.Light
+        });
+
+        await StatusBar.setBackgroundColor({
+          color: '#8B5AA6'
+        });
+
+        await StatusBar.setOverlaysWebView({
+          overlay: false
+        });
       }
-    }
+    };
+
+    setupNativeApp();
   }, []);
 
   return (

@@ -46,13 +46,13 @@ export function Layout({ children }: LayoutProps) {
   ];
 
   return (
-    <div className="h-screen flex flex-col bg-gradient-lunar relative safe-area-layout overflow-hidden">
+    <div className="h-screen flex flex-col bg-gradient-lunar relative overflow-hidden">
       {/* Twinkling Stars Background */}
       <TwinklingStars />
 
-      {/* Header - FISSO */}
-      <header className="bg-gradient-card/80 backdrop-blur-sm border-b border-border/50 z-50 safe-area-top flex-shrink-0">
-        <div className="container mx-auto px-4 py-4 bg-gradient-lunar">
+      {/* Header - SENZA classi safe-area */}
+      <header className="bg-gradient-lunar backdrop-blur-sm border-b border-border/30 z-50 flex-shrink-0">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-gradient-glow flex items-center justify-center shadow-glow">
@@ -76,16 +76,16 @@ export function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Main Content - SCROLLABILE */}
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 overflow-y-auto bg-background">
         <div className="container mx-auto px-4 py-6">
           {children}
         </div>
       </main>
 
       {/* Bottom Navigation - FISSO */}
-      <nav className="bg-gradient-card/95 backdrop-blur-sm border-t border-border/50 safe-area-bottom-nav flex-shrink-0">
-        <div className="container mx-auto px-2 bg-gradient-lunar">
-          <div className="flex items-center justify-around py-1 bg-gradient-lunar">
+      <nav className="bg-gradient-lunar backdrop-blur-sm border-t border-border/30 flex-shrink-0">
+        <div className="container mx-auto px-2">
+          <div className="flex items-center justify-around py-1">
             {navItems.map(({ path, icon: Icon, label }) => (
               <Button
                 key={path}
