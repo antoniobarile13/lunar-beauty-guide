@@ -33,13 +33,14 @@ export default function DayDetail() {
   
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center gap-3">
-        <Button variant="ghost" size="sm" onClick={handleBackToCalendar}>
-          <ArrowLeft className="w-4 h-4" />
-          {t("dayDetail.backToCalendar")}
-        </Button>
-      </div>
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={handleBackToCalendar}
+        className="text-white hover:text-white/80 hover:bg-white/10">
+        <ArrowLeft className="w-4 h-4" />
+        {t("dayDetail.backToCalendar")}
+      </Button>
       
       {/* Date and Moon Phase */}
       <Card className="bg-gradient-card border-border/50 shadow-lunar">
