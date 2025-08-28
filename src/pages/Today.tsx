@@ -95,21 +95,6 @@ export default function Today() {
       </div>
 
       {/* Calendar CTA */}
-      <Card className="bg-gradient-card border-border/50 shadow-soft">
-        <CardContent className="p-6">
-          <div className="text-center space-y-3">
-            <h3 className="font-semibold text-foreground">
-              {t("calendar.title")}
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              Esplora i consigli per tutti i giorni del mese
-            </p>
-            <Button onClick={handleGoToCalendar} className="bg-lunar-primary hover:bg-lunar-primary/90 text-primary-foreground">
-              <Calendar className="w-4 h-4 mr-2" />
-              Vai al calendario
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      
     </div>;
 }
