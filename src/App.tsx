@@ -21,7 +21,7 @@ const App = () => {
   useEffect(() => {
     const setupNativeApp = async () => {
       if (Capacitor.isNativePlatform()) {
-        // Solo configurazione status bar semplice
+        // Status bar (quella sopra) - già configurata
         await StatusBar.setStyle({
           style: Style.Light
         });
@@ -33,6 +33,17 @@ const App = () => {
         await StatusBar.setOverlaysWebView({
           overlay: false
         });
+
+        // AGGIUNGI QUESTA PARTE per la Navigation Bar (i 3 tasti Android)
+        if (Capacitor.getPlatform() === 'android') {
+          try {
+            await NavigationBar.setColor({
+              color: '#8B5AA6'
+            });
+          } catch (error) {
+            console.log('NavigationBar not available:', error);
+          }
+        }
       }
     };
 
