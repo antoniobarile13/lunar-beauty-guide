@@ -19,6 +19,14 @@ const categoryIcons = {
   treat: Sparkles
 };
 
+// Sfondi colorati per le icone come nella pagina filtri
+const categoryIconBgs = {
+  cut: "bg-beauty-cut/10",
+  color: "bg-beauty-color/10",
+  wax: "bg-beauty-wax/10",
+  treat: "bg-beauty-treat/10"
+};
+
 const adviceBackgrounds = {
   Excellent: "bg-advice-excellent border-badge-excellent/20",
   Good: "bg-advice-good border-badge-good/20",
@@ -30,7 +38,7 @@ const adviceBackgrounds = {
 export function BeautyCard({ category, advice, variant = "default", className }: BeautyCardProps) {
   const { t } = useTranslation();
   const Icon = categoryIcons[category];
-  
+
   return (
     <Card className={cn(
       "shadow-soft transition-smooth hover:shadow-lunar",
@@ -43,8 +51,11 @@ export function BeautyCard({ category, advice, variant = "default", className }:
         variant === "compact" && "pb-2 pt-0"
       )}>
         <CardTitle className="flex items-center gap-2 text-sm font-medium">
-          <div className="p-1.5 rounded-lg bg-white">
-            <Icon className="w-4 h-4 text-yellow-500 drop-shadow-[0_0_1px_black]" />
+          <div className={cn(
+            "w-10 h-10 rounded-xl flex items-center justify-center transition-smooth",
+            categoryIconBgs[category]
+          )}>
+            <Icon className="w-5 h-5 text-yellow-500 drop-shadow-[0_0_1px_black]" />
           </div>
           <span>{t(`categories.${category}`)}</span>
           <BeautyBadge type={advice.badge} className="ml-auto" />

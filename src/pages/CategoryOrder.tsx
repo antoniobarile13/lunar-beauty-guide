@@ -9,12 +9,14 @@ import { BeautyCategory } from "@/types/lunar";
 import { generateDailyAdviceRange } from "@/services/adviceService";
 import { BeautyBadge } from "@/components/BeautyBadge";
 import { cn } from "@/lib/utils";
+
 interface CategoryData {
   category: BeautyCategory;
   icon: typeof Scissors;
   color: string;
   bgColor: string;
 }
+
 const categories: CategoryData[] = [{
   category: 'cut',
   icon: Scissors,
@@ -36,13 +38,13 @@ const categories: CategoryData[] = [{
   color: 'text-beauty-treat',
   bgColor: 'bg-beauty-treat/10'
 }];
+
 export default function CategoryOrder() {
-  const {
-    t
-  } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<BeautyCategory | null>(null);
   const [favorableDates, setFavorableDates] = useState<any[]>([]);
+
   const handleCategorySelect = (category: BeautyCategory) => {
     setSelectedCategory(category);
 
@@ -55,10 +57,13 @@ export default function CategoryOrder() {
     const adviceRange = generateDailyAdviceRange(startDateISO, endDateISO, 'Europe/Zurich', 'it');
 
     // Filtra solo le date con punteggio positivo per la categoria selezionata
-    const favorable = adviceRange.filter(advice => advice.items[category].score >= 1).sort((a, b) => b.items[category].score - a.items[category].score).slice(0, 10); // Mostra solo le prime 10 date migliori
+    const favorable = adviceRange.filter(advice => advice.items[category].score >= 1)
+      .sort((a, b) => b.items[category].score - a.items[category].score)
+      .slice(0, 10); // Mostra solo le prime 10 date migliori
 
     setFavorableDates(favorable);
   };
+
   const handleBack = () => {
     if (selectedCategory) {
       setSelectedCategory(null);
@@ -67,6 +72,7 @@ export default function CategoryOrder() {
       navigate('/');
     }
   };
+
   const formatDate = (dateISO: string) => {
     const date = new Date(dateISO);
     return date.toLocaleDateString('it-IT', {
@@ -75,10 +81,13 @@ export default function CategoryOrder() {
       month: 'long'
     });
   };
+
   if (selectedCategory) {
     const categoryData = categories.find(c => c.category === selectedCategory)!;
     const Icon = categoryData.icon;
-    return <div className="space-y-6">
+
+    return (
+      <div className="space-y-6">
         {/* Header */}
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="sm" onClick={handleBack} className="text-white hover:bg-white/10">
@@ -89,7 +98,8 @@ export default function CategoryOrder() {
 
         <div className="flex items-center gap-3 mb-6">
           <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center", categoryData.bgColor)}>
-            <Icon className={cn("w-6 h-6", categoryData.color)} />
+            {/* Cambiato il colore dell'icona per renderla ben visibile come nella griglia */}
+            <Icon className="w-6 h-6 text-yellow-500 drop-shadow-[0_0_1px_black]" />
           </div>
           <div>
             <h1 className="text-2xl font-bold text-white">
@@ -97,21 +107,25 @@ export default function CategoryOrder() {
             </h1>
             <p className="text-white/80">
               {t("categoryOrder.favorableDatesFor", {
-              category: t(`categories.${selectedCategory}`)
-            })}
+                category: t(`categories.${selectedCategory}`)
+              })}
             </p>
           </div>
         </div>
 
         {/* Date favorevoli */}
         <div className="space-y-4">
-          {favorableDates.length === 0 ? <Card className="bg-gradient-card/80 backdrop-blur-sm border-border/50">
+          {favorableDates.length === 0 ? (
+            <Card className="bg-gradient-card/80 backdrop-blur-sm border-border/50">
               <CardContent className="p-6 text-center">
                 <p className="text-muted-foreground">
                   {t("categoryOrder.noFavorableDates")}
                 </p>
               </CardContent>
-            </Card> : favorableDates.map(advice => <Card key={advice.dateISO} className="bg-gradient-card/80 backdrop-blur-sm border-border/50 hover:shadow-soft transition-smooth cursor-pointer" onClick={() => navigate(`/day/${advice.dateISO}`)}>
+            </Card>
+          ) : (
+            favorableDates.map(advice => (
+              <Card key={advice.dateISO} className="bg-gradient-card/80 backdrop-blur-sm border-border/50 hover:shadow-soft transition-smooth cursor-pointer" onClick={() => navigate(`/day/${advice.dateISO}`)}>
                 <CardContent className="p-4 bg-slate-300">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
@@ -121,8 +135,8 @@ export default function CategoryOrder() {
                         </div>
                         <div className="text-xs text-muted-foreground uppercase">
                           {new Date(advice.dateISO).toLocaleDateString('it-IT', {
-                      month: 'short'
-                    })}
+                            month: 'short'
+                          })}
                         </div>
                       </div>
                       <div>
@@ -150,7 +164,9 @@ export default function CategoryOrder() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))
+          )}
         </div>
 
         {/* Spiegazione */}
@@ -166,10 +182,12 @@ export default function CategoryOrder() {
             </p>
           </CardContent>
         </Card>
-      </div>;
+      </div>
+    );
   }
-  return <div className="space-y-6">
 
+  return (
+    <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-white mb-2">
           {t("categoryOrder.title")}
@@ -182,11 +200,12 @@ export default function CategoryOrder() {
       {/* Grid delle categorie */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {categories.map(categoryData => {
-        const Icon = categoryData.icon;
-        return <Card key={categoryData.category} className="bg-gradient-card/80 backdrop-blur-sm border-border/50 hover:shadow-soft transition-smooth cursor-pointer group" onClick={() => handleCategorySelect(categoryData.category)}>
+          const Icon = categoryData.icon;
+          return (
+            <Card key={categoryData.category} className="bg-gradient-card/80 backdrop-blur-sm border-border/50 hover:shadow-soft transition-smooth cursor-pointer group" onClick={() => handleCategorySelect(categoryData.category)}>
               <CardContent className="p-6 bg-slate-50 rounded-2xl">
                 <div className="flex items-center gap-4">
-                  <div className={cn("w-16 h-16 rounded-xl flex items-center justify-center transition-smooth group-hover:scale-110", "bg-beauty-cut/10")}>
+                  <div className={cn("w-16 h-16 rounded-xl flex items-center justify-center transition-smooth group-hover:scale-110", categoryData.bgColor)}>
                     <Icon className={cn("w-8 h-8 text-yellow-500 drop-shadow-[0_0_1px_black]")} />
                   </div>
                   <div className="flex-1">
@@ -199,8 +218,9 @@ export default function CategoryOrder() {
                   </div>
                 </div>
               </CardContent>
-            </Card>;
-      })}
+            </Card>
+          );
+        })}
       </div>
 
       {/* Info card */}
@@ -221,5 +241,6 @@ export default function CategoryOrder() {
           </div>
         </CardContent>
       </Card>
-    </div>;
+    </div>
+  );
 }
