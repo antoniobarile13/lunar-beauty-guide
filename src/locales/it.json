@@ -118,5 +118,143 @@
       "wax": "La depilazione e ceretta durante certe fasi lunari può risultare meno dolorosa e con ricrescita più lenta. I momenti indicati sono tradizionalmente associati a una maggiore efficacia del trattamento.",
       "treat": "I trattamenti estetici per viso e corpo possono beneficiare delle energie lunari per una migliore penetrazione dei principi attivi e risultati più duraturi. Le date indicate sono quelle più propizie per questi trattamenti."
     }
+  },
+  "explanations": {
+    "cut": {
+      "NEW": {
+        "title": "Rinvia il taglio",
+        "text": "I tagli oggi tendono a ricrescere più lentamente."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Taglio leggero",
+        "text": "Favorisce una ricrescita più rapida e sana."
+      },
+      "FIRST_QUARTER": {
+        "title": "Taglio consigliato",
+        "text": "Ottimo per dare forma."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Taglio top",
+        "text": "Per volume e vitalità."
+      },
+      "FULL": {
+        "title": "Taglio neutro",
+        "text": "Attenzione al crespo."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Taglio non ideale",
+        "text": "Meglio rifiniture leggere."
+      },
+      "LAST_QUARTER": {
+        "title": "Taglio no",
+        "text": "Meglio attendere fase crescente."
+      },
+      "WANING_CRESCENT": {
+        "title": "Rimanda il taglio",
+        "text": "Evita cambi drastici."
+      }
+    },
+    "color": {
+      "NEW": {
+        "title": "Colore ok",
+        "text": "Neutralità: punta a tonalità delicate."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Colore brillante",
+        "text": "Buon ancoraggio dei pigmenti."
+      },
+      "FIRST_QUARTER": {
+        "title": "Colore ok",
+        "text": "Buona tenuta."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Colore top",
+        "text": "Massima brillantezza."
+      },
+      "FULL": {
+        "title": "Colore visibile",
+        "text": "Effetto wow, ma cura post-colore."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Colore neutro",
+        "text": "Toni naturali."
+      },
+      "LAST_QUARTER": {
+        "title": "Colore no",
+        "text": "Tenuta ridotta."
+      },
+      "WANING_CRESCENT": {
+        "title": "Gloss/tono su tono",
+        "text": "Ravviva senza stress."
+      }
+    },
+    "wax": {
+      "NEW": {
+        "title": "Ceretta favorevole",
+        "text": "Ricrescita spesso più lenta."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Ceretta neutra",
+        "text": "Niente di particolare."
+      },
+      "FIRST_QUARTER": {
+        "title": "Ceretta sconsigliata",
+        "text": "Ricrescita più rapida possibile."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Ceretta no",
+        "text": "Meglio rimandare."
+      },
+      "FULL": {
+        "title": "Ceretta sconsigliata",
+        "text": "Possibile sensibilità."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Ceretta ok",
+        "text": "Ricrescita moderata."
+      },
+      "LAST_QUARTER": {
+        "title": "Ceretta top",
+        "text": "Ottima per ridurre ricrescita."
+      },
+      "WANING_CRESCENT": {
+        "title": "Ceretta consigliata",
+        "text": "Ricrescita tendenzialmente lenta."
+      }
+    },
+    "treat": {
+      "NEW": {
+        "title": "Trattamenti rigeneranti",
+        "text": "Ottimo per detox/purificanti."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Idratazione",
+        "text": "Spinta a nutrimento e idratazione."
+      },
+      "FIRST_QUARTER": {
+        "title": "Nutrizione",
+        "text": "Maschere nutrienti."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Lucidanti",
+        "text": "Trattamenti gloss."
+      },
+      "FULL": {
+        "title": "Spa/relax",
+        "text": "Maschere lenitive."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Ristrutturazione",
+        "text": "Cheratina/bonding."
+      },
+      "LAST_QUARTER": {
+        "title": "Esfoliazione",
+        "text": "Scrub/peeling delicato."
+      },
+      "WANING_CRESCENT": {
+        "title": "Detox cute",
+        "text": "Impacchi e oli."
+      }
+    }
   }
 }

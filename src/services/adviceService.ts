@@ -27,7 +27,7 @@ export function getAdviceForPhase(phase: MoonPhase, locale: 'it' | 'en' | 'de' |
   
   categories.forEach(category => {
     const rule = phaseRules[category];
-    // Fallback to English for new languages that don't have specific translations in advice data
+    // Use Italian text for Italian, English for others as fallback
     const useItalian = locale === 'it';
     result[category] = {
       score: rule.score,

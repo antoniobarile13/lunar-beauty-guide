@@ -86,6 +86,144 @@
     "short": ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
     "long": ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
   },
+  "explanations": {
+    "cut": {
+      "NEW": {
+        "title": "Schnitt verschieben",
+        "text": "Haare wachsen heute langsamer nach."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Leichter Schnitt",
+        "text": "Fördert schnelleres, gesünderes Wachstum."
+      },
+      "FIRST_QUARTER": {
+        "title": "Schnitt empfohlen",
+        "text": "Ideal zum Formen."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Top Schnitt",
+        "text": "Für Volumen und Vitalität."
+      },
+      "FULL": {
+        "title": "Neutraler Schnitt",
+        "text": "Aufpassen bei Frizz."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Schnitt nicht ideal",
+        "text": "Besser leichte Spitzenschnitte."
+      },
+      "LAST_QUARTER": {
+        "title": "Schnitt vermeiden",
+        "text": "Besser auf wachsende Phase warten."
+      },
+      "WANING_CRESCENT": {
+        "title": "Schnitt verschieben",
+        "text": "Drastische Änderungen vermeiden."
+      }
+    },
+    "color": {
+      "NEW": {
+        "title": "Farbe ok",
+        "text": "Neutral: sanfte Töne bevorzugen."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Leuchtende Farbe",
+        "text": "Gute Pigmenthaftung."
+      },
+      "FIRST_QUARTER": {
+        "title": "Farbe ok",
+        "text": "Gute Haltbarkeit."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Top Farbe",
+        "text": "Maximaler Glanz."
+      },
+      "FULL": {
+        "title": "Auffällige Farbe",
+        "text": "Wow-Effekt; Nachpflege nötig."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Neutrale Farbe",
+        "text": "Natürliche Töne."
+      },
+      "LAST_QUARTER": {
+        "title": "Farbe vermeiden",
+        "text": "Geringere Haltbarkeit."
+      },
+      "WANING_CRESCENT": {
+        "title": "Gloss/Tönung",
+        "text": "Sanfte Auffrischung."
+      }
+    },
+    "wax": {
+      "NEW": {
+        "title": "Waxing günstig",
+        "text": "Oft langsameres Nachwachsen."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Neutrales Waxing",
+        "text": "Nichts Besonderes."
+      },
+      "FIRST_QUARTER": {
+        "title": "Waxing nicht ideal",
+        "text": "Möglicherweise schnelleres Nachwachsen."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Waxing vermeiden",
+        "text": "Besser verschieben."
+      },
+      "FULL": {
+        "title": "Waxing nicht empfohlen",
+        "text": "Mögliche Empfindlichkeit."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Waxing ok",
+        "text": "Moderates Nachwachsen."
+      },
+      "LAST_QUARTER": {
+        "title": "Top Waxing",
+        "text": "Ideal um Nachwachsen zu verlangsamen."
+      },
+      "WANING_CRESCENT": {
+        "title": "Waxing empfohlen",
+        "text": "Tendenziell langsameres Nachwachsen."
+      }
+    },
+    "treat": {
+      "NEW": {
+        "title": "Regenerierende Pflege",
+        "text": "Ideal für Detox/Reinigung."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Hydratation",
+        "text": "Fokus auf Feuchtigkeit."
+      },
+      "FIRST_QUARTER": {
+        "title": "Ernährung",
+        "text": "Nährende Masken."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Glanz-Behandlung",
+        "text": "Glanz-Booster."
+      },
+      "FULL": {
+        "title": "Spa/Entspannung",
+        "text": "Beruhigende Masken."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Reparatur",
+        "text": "Keratin/Bonding."
+      },
+      "LAST_QUARTER": {
+        "title": "Peeling",
+        "text": "Sanftes Peeling."
+      },
+      "WANING_CRESCENT": {
+        "title": "Kopfhaut-Detox",
+        "text": "Packungen und Öle."
+      }
+    }
+  },
   "months": {
     "short": ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
     "long": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]

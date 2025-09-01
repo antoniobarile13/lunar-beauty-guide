@@ -118,5 +118,143 @@
       "wax": "Hair removal and waxing during certain lunar phases can be less painful with slower regrowth. The indicated times are traditionally associated with greater treatment effectiveness.",
       "treat": "Aesthetic treatments for face and body can benefit from lunar energies for better penetration of active ingredients and more lasting results. The indicated dates are the most auspicious for these treatments."
     }
+  },
+  "explanations": {
+    "cut": {
+      "NEW": {
+        "title": "Delay haircut",
+        "text": "Hair may grow back slower today."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Light trim",
+        "text": "Supports faster, healthier growth."
+      },
+      "FIRST_QUARTER": {
+        "title": "Cut recommended",
+        "text": "Great for shaping."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Top cut",
+        "text": "For volume and vitality."
+      },
+      "FULL": {
+        "title": "Neutral cut",
+        "text": "Watch for frizz."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Not ideal cut",
+        "text": "Prefer light trims."
+      },
+      "LAST_QUARTER": {
+        "title": "Skip cut",
+        "text": "Wait for waxing phase."
+      },
+      "WANING_CRESCENT": {
+        "title": "Delay cut",
+        "text": "Avoid big changes."
+      }
+    },
+    "color": {
+      "NEW": {
+        "title": "Color ok",
+        "text": "Neutral: prefer soft tones."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Vibrant color",
+        "text": "Good pigment hold."
+      },
+      "FIRST_QUARTER": {
+        "title": "Color ok",
+        "text": "Good hold."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Top color",
+        "text": "Max shine."
+      },
+      "FULL": {
+        "title": "Showy color",
+        "text": "Wow effect; aftercare needed."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Neutral color",
+        "text": "Natural tones."
+      },
+      "LAST_QUARTER": {
+        "title": "Skip color",
+        "text": "Lower hold."
+      },
+      "WANING_CRESCENT": {
+        "title": "Gloss/toner",
+        "text": "Refresh gently."
+      }
+    },
+    "wax": {
+      "NEW": {
+        "title": "Waxing favorable",
+        "text": "Often slower regrowth."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Neutral waxing",
+        "text": "Nothing special."
+      },
+      "FIRST_QUARTER": {
+        "title": "Waxing not ideal",
+        "text": "Potentially quicker regrowth."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Skip waxing",
+        "text": "Better to postpone."
+      },
+      "FULL": {
+        "title": "Waxing not recommended",
+        "text": "Possible sensitivity."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Waxing ok",
+        "text": "Moderate regrowth."
+      },
+      "LAST_QUARTER": {
+        "title": "Top waxing",
+        "text": "Great to slow regrowth."
+      },
+      "WANING_CRESCENT": {
+        "title": "Waxing recommended",
+        "text": "Tends to slower regrowth."
+      }
+    },
+    "treat": {
+      "NEW": {
+        "title": "Regenerating care",
+        "text": "Great for detox/purifying."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Hydration",
+        "text": "Focus on moisture."
+      },
+      "FIRST_QUARTER": {
+        "title": "Nutrition",
+        "text": "Nourishing masks."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Glossing",
+        "text": "Shine boosters."
+      },
+      "FULL": {
+        "title": "Spa/relax",
+        "text": "Soothing masks."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Repair",
+        "text": "Keratin/bonding."
+      },
+      "LAST_QUARTER": {
+        "title": "Exfoliation",
+        "text": "Gentle peeling."
+      },
+      "WANING_CRESCENT": {
+        "title": "Scalp detox",
+        "text": "Wraps and oils."
+      }
+    }
   }
 }

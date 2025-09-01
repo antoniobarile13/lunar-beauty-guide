@@ -86,6 +86,144 @@
     "short": ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
     "long": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
   },
+  "explanations": {
+    "cut": {
+      "NEW": {
+        "title": "Posponer corte",
+        "text": "El cabello puede crecer más lento hoy."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Corte ligero",
+        "text": "Favorece un crecimiento más rápido y saludable."
+      },
+      "FIRST_QUARTER": {
+        "title": "Corte recomendado",
+        "text": "Excelente para dar forma."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Corte top",
+        "text": "Para volumen y vitalidad."
+      },
+      "FULL": {
+        "title": "Corte neutro",
+        "text": "Cuidado con el encrespado."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Corte no ideal",
+        "text": "Mejor retoques ligeros."
+      },
+      "LAST_QUARTER": {
+        "title": "Evitar corte",
+        "text": "Mejor esperar fase creciente."
+      },
+      "WANING_CRESCENT": {
+        "title": "Posponer corte",
+        "text": "Evita cambios drásticos."
+      }
+    },
+    "color": {
+      "NEW": {
+        "title": "Color ok",
+        "text": "Neutral: prefiere tonos suaves."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Color brillante",
+        "text": "Buen agarre del pigmento."
+      },
+      "FIRST_QUARTER": {
+        "title": "Color ok",
+        "text": "Buena duración."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Color top",
+        "text": "Máximo brillo."
+      },
+      "FULL": {
+        "title": "Color llamativo",
+        "text": "Efecto wow; cuidado posterior necesario."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Color neutro",
+        "text": "Tonos naturales."
+      },
+      "LAST_QUARTER": {
+        "title": "Evitar color",
+        "text": "Menor duración."
+      },
+      "WANING_CRESCENT": {
+        "title": "Gloss/matizador",
+        "text": "Refresca suavemente."
+      }
+    },
+    "wax": {
+      "NEW": {
+        "title": "Depilación favorable",
+        "text": "A menudo crecimiento más lento."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Depilación neutral",
+        "text": "Nada especial."
+      },
+      "FIRST_QUARTER": {
+        "title": "Depilación no ideal",
+        "text": "Posible crecimiento más rápido."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Evitar depilación",
+        "text": "Mejor posponer."
+      },
+      "FULL": {
+        "title": "Depilación no recomendada",
+        "text": "Posible sensibilidad."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Depilación ok",
+        "text": "Crecimiento moderado."
+      },
+      "LAST_QUARTER": {
+        "title": "Depilación top",
+        "text": "Excelente para reducir crecimiento."
+      },
+      "WANING_CRESCENT": {
+        "title": "Depilación recomendada",
+        "text": "Tiende a crecimiento más lento."
+      }
+    },
+    "treat": {
+      "NEW": {
+        "title": "Cuidados regenerantes",
+        "text": "Excelente para detox/purificantes."
+      },
+      "WAXING_CRESCENT": {
+        "title": "Hidratación",
+        "text": "Enfoque en la humedad."
+      },
+      "FIRST_QUARTER": {
+        "title": "Nutrición",
+        "text": "Mascarillas nutritivas."
+      },
+      "WAXING_GIBBOUS": {
+        "title": "Tratamientos de brillo",
+        "text": "Potenciadores de brillo."
+      },
+      "FULL": {
+        "title": "Spa/relajación",
+        "text": "Mascarillas calmantes."
+      },
+      "WANING_GIBBOUS": {
+        "title": "Reparación",
+        "text": "Keratina/bonding."
+      },
+      "LAST_QUARTER": {
+        "title": "Exfoliación",
+        "text": "Peeling suave."
+      },
+      "WANING_CRESCENT": {
+        "title": "Detox del cuero cabelludo",
+        "text": "Envolturas y aceites."
+      }
+    }
+  },
   "months": {
     "short": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
     "long": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
