@@ -3,11 +3,12 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "@/store/appStore";
 import { getTodayAdvice } from "@/services/adviceService";
+import { getSunMoonTimes } from "@/services/sunMoonTimesService";
 import { MoonIcon } from "@/components/MoonIcon";
 import { BeautyCard } from "@/components/BeautyCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Star, Calendar } from "lucide-react";
+import { ArrowRight, Star, Calendar, Sunrise, Sunset } from "lucide-react";
 export default function Today() {
   const {
     t
@@ -21,6 +22,7 @@ export default function Today() {
   // Get today's date and advice
   const today = new Date().toISOString().split('T')[0];
   const todayAdvice = getTodayAdvice(settings.timezone, settings.language);
+  const sunMoonTimes = getSunMoonTimes(today, settings.timezone);
   useEffect(() => {
     setCurrentDate(today);
   }, [today, setCurrentDate]);
@@ -43,14 +45,42 @@ export default function Today() {
               <p className="text-sm text-lunar-primary font-medium mb-2">
                 Luna in {t(`zodiac.${todayAdvice.zodiacSign}`)}
               </p>
-              <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
-                <span>
-                  {t("today.illumination")}: {Math.round(todayAdvice.illumination * 100)}%
-                </span>
-                <span>•</span>
-                <span>
-                  {t("today.moonAge")}: {Math.round(todayAdvice.ageDays)} {t("today.days")}
-                </span>
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center gap-4">
+                  <span>
+                    {t("today.illumination")}: {Math.round(todayAdvice.illumination * 100)}%
+                  </span>
+                  <span>•</span>
+                  <span>
+                    {t("today.moonAge")}: {Math.round(todayAdvice.ageDays)} {t("today.days")}
+                  </span>
+                </div>
+                
+                {/* Solar times row */}
+                <div className="flex items-center justify-center gap-4">
+                  <div className="flex items-center gap-1">
+                    <Sunrise className="w-4 h-4 text-yellow-500" />
+                    <span>{sunMoonTimes.solarSunrise}</span>
+                  </div>
+                  <span>•</span>
+                  <div className="flex items-center gap-1">
+                    <Sunset className="w-4 h-4 text-orange-500" />
+                    <span>{sunMoonTimes.solarSunset}</span>
+                  </div>
+                </div>
+
+                {/* Lunar times row */}
+                <div className="flex items-center justify-center gap-4">
+                  <div className="flex items-center gap-1">
+                    <span className="text-xs">🌙</span>
+                    <span>{sunMoonTimes.lunarSunrise}</span>
+                  </div>
+                  <span>•</span>
+                  <div className="flex items-center gap-1">
+                    <span className="text-xs">🌚</span>
+                    <span>{sunMoonTimes.lunarSunset}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

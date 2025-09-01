@@ -34,16 +34,7 @@ const App = () => {
           overlay: false
         });
 
-        // AGGIUNGI QUESTA PARTE per la Navigation Bar (i 3 tasti Android)
-        if (Capacitor.getPlatform() === 'android') {
-          try {
-            await NavigationBar.setColor({
-              color: '#8B5AA6'
-            });
-          } catch (error) {
-            console.log('NavigationBar not available:', error);
-          }
-        }
+        // Navigation bar configuration would require additional plugin
       }
     };
 
