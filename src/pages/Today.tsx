@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "@/store/appStore";
-import { getTranslatedTodayAdvice } from "@/services/translatedAdviceService";
+import { getTodayAdvice } from "@/services/adviceService";
 import { getSunMoonTimes } from "@/services/sunMoonTimesService";
 import { MoonIcon } from "@/components/MoonIcon";
 import { BeautyCard } from "@/components/BeautyCard";
@@ -21,7 +21,7 @@ export default function Today() {
 
   // Get today's date and advice
   const today = new Date().toISOString().split('T')[0];
-  const todayAdvice = getTranslatedTodayAdvice(settings.timezone, t);
+  const todayAdvice = getTodayAdvice(settings.timezone, settings.language);
   const sunMoonTimes = getSunMoonTimes(today, settings.timezone);
   useEffect(() => {
     setCurrentDate(today);

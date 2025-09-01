@@ -15,7 +15,7 @@ function scoreToBadge(score: number): BadgeType {
 }
 
 // Get advice for a specific phase and locale
-export function getAdviceForPhase(phase: MoonPhase, locale: 'it' | 'en' | 'de' | 'es' | 'fr' | 'pt' = 'it'): Record<BeautyCategory, BeautyAdviceItem> {
+export function getAdviceForPhase(phase: MoonPhase, locale: 'it' | 'en' = 'it'): Record<BeautyCategory, BeautyAdviceItem> {
   const phaseRules = adviceRules[phase];
   
   if (!phaseRules) {
@@ -27,12 +27,10 @@ export function getAdviceForPhase(phase: MoonPhase, locale: 'it' | 'en' | 'de' |
   
   categories.forEach(category => {
     const rule = phaseRules[category];
-    // Use Italian text for Italian, English for others as fallback
-    const useItalian = locale === 'it';
     result[category] = {
       score: rule.score,
-      title: useItalian ? rule.title_it : rule.title_en,
-      text: useItalian ? rule.text_it : rule.text_en,
+      title: locale === 'it' ? rule.title_it : rule.title_en,
+      text: locale === 'it' ? rule.text_it : rule.text_en,
       badge: scoreToBadge(rule.score)
     };
   });
@@ -58,7 +56,7 @@ function getBestCategory(items: Record<BeautyCategory, BeautyAdviceItem>): Beaut
 }
 
 // Generate complete daily advice
-export function getDailyAdvice(dateISO: string, timezone: string = 'Europe/Zurich', locale: 'it' | 'en' | 'de' | 'es' | 'fr' | 'pt' = 'it'): DailyAdvice {
+export function getDailyAdvice(dateISO: string, timezone: string = 'Europe/Zurich', locale: 'it' | 'en' = 'it'): DailyAdvice {
   const moonPhase = getMoonPhase(dateISO, timezone);
   const items = getAdviceForPhase(moonPhase.phase, locale);
   const bestCategory = getBestCategory(items);
@@ -80,7 +78,7 @@ export function generateDailyAdviceRange(
   startDate: string, 
   endDate: string, 
   timezone: string = 'Europe/Zurich',
-  locale: 'it' | 'en' | 'de' | 'es' | 'fr' | 'pt' = 'it'
+  locale: 'it' | 'en' = 'it'
 ): DailyAdvice[] {
   const start = new Date(startDate);
   const end = new Date(endDate);
@@ -100,7 +98,7 @@ export function generateDailyAdviceRange(
 const adviceCache = new Map<string, DailyAdvice>();
 const CACHE_DURATION = 90; // days
 
-export function getCachedDailyAdvice(dateISO: string, timezone: string = 'Europe/Zurich', locale: 'it' | 'en' | 'de' | 'es' | 'fr' | 'pt' = 'it'): DailyAdvice {
+export function getCachedDailyAdvice(dateISO: string, timezone: string = 'Europe/Zurich', locale: 'it' | 'en' = 'it'): DailyAdvice {
   const cacheKey = `advice:${dateISO}:${timezone}:${locale}`;
   
   if (adviceCache.has(cacheKey)) {
@@ -120,7 +118,7 @@ export function getCachedDailyAdvice(dateISO: string, timezone: string = 'Europe
 }
 
 // Get today's advice (convenience function)
-export function getTodayAdvice(timezone: string = 'Europe/Zurich', locale: 'it' | 'en' | 'de' | 'es' | 'fr' | 'pt' = 'it'): DailyAdvice {
+export function getTodayAdvice(timezone: string = 'Europe/Zurich', locale: 'it' | 'en' = 'it'): DailyAdvice {
   const today = new Date().toISOString().split('T')[0];
   return getCachedDailyAdvice(today, timezone, locale);
 }

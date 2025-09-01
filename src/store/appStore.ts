@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
 export interface AppSettings {
-  language: 'it' | 'en' | 'de' | 'es' | 'fr' | 'pt';
+  language: 'it' | 'en';
   timezone: string;
   notifications: boolean;
   reminderTime: string;
