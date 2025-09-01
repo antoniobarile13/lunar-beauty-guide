@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "Luna Belleza",
+    "subtitle": "Tu calendario lunar"
+  },
+  "navigation": {
+    "today": "Hoy",
+    "calendar": "Calendario",
+    "settings": "Ajustes"
+  },
+  "today": {
+    "bestAdvice": "Mejor consejo",
+    "todayAdvice": "Consejos de hoy",
+    "seeDetails": "Ver detalles",
+    "illumination": "Iluminación",
+    "moonAge": "Edad lunar",
+    "days": "días"
+  },
+  "calendar": {
+    "title": "Calendario",
+    "monthYear": "{{month}} {{year}}",
+    "previousMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "goToToday": "Ir a hoy"
+  },
+  "dayDetail": {
+    "title": "Detalles para {{date}}",
+    "backToCalendar": "Volver al calendario",
+    "advice": "Consejos",
+    "moonPhase": "Fase lunar",
+    "zodiacSign": "Signo zodiacal"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "subtitle": "Configura tus preferencias",
+    "language": "Idioma",
+    "timezone": "Zona horaria",
+    "notifications": "Notificaciones",
+    "reminderTime": "Hora de recordatorio"
+  },
+  "phases": {
+    "NEW": "Luna nueva",
+    "WAXING_CRESCENT": "Luna creciente",
+    "FIRST_QUARTER": "Cuarto creciente",
+    "WAXING_GIBBOUS": "Gibosa creciente",
+    "FULL": "Luna llena",
+    "WANING_GIBBOUS": "Gibosa menguante",
+    "LAST_QUARTER": "Cuarto menguante",
+    "WANING_CRESCENT": "Luna menguante"
+  },
+  "zodiac": {
+    "ARIES": "Aries",
+    "TAURUS": "Tauro",
+    "GEMINI": "Géminis",
+    "CANCER": "Cáncer",
+    "LEO": "Leo",
+    "VIRGO": "Virgo",
+    "LIBRA": "Libra",
+    "SCORPIO": "Escorpio",
+    "SAGITTARIUS": "Sagitario",
+    "CAPRICORN": "Capricornio",
+    "AQUARIUS": "Acuario",
+    "PISCES": "Piscis"
+  },
+  "categories": {
+    "cut": "Corte",
+    "color": "Coloración",
+    "wax": "Depilación",
+    "treat": "Tratamiento"
+  },
+  "badges": {
+    "Excellent": "Excelente",
+    "Good": "Bueno",
+    "Neutral": "Neutral",
+    "NotIdeal": "No ideal",
+    "Avoid": "Evitar"
+  },
+  "categoryOrder": {
+    "title": "Orden de categorías",
+    "subtitle": "Ordena las categorías según tus preferencias",
+    "dragToReorder": "Arrastra para reordenar",
+    "saveOrder": "Guardar orden",
+    "resetOrder": "Restablecer orden"
+  },
+  "weekdays": {
+    "short": ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
+    "long": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+  },
+  "months": {
+    "short": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+    "long": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+  }
+}

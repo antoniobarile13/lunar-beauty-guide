@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "Luna Beauté",
+    "subtitle": "Votre calendrier lunaire"
+  },
+  "navigation": {
+    "today": "Aujourd'hui",
+    "calendar": "Calendrier",
+    "settings": "Paramètres"
+  },
+  "today": {
+    "bestAdvice": "Meilleur conseil",
+    "todayAdvice": "Conseils du jour",
+    "seeDetails": "Voir les détails",
+    "illumination": "Illumination",
+    "moonAge": "Âge lunaire",
+    "days": "jours"
+  },
+  "calendar": {
+    "title": "Calendrier",
+    "monthYear": "{{month}} {{year}}",
+    "previousMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "goToToday": "Aller à aujourd'hui"
+  },
+  "dayDetail": {
+    "title": "Détails pour {{date}}",
+    "backToCalendar": "Retour au calendrier",
+    "advice": "Conseils",
+    "moonPhase": "Phase lunaire",
+    "zodiacSign": "Signe zodiacal"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "subtitle": "Configurez vos préférences",
+    "language": "Langue",
+    "timezone": "Fuseau horaire",
+    "notifications": "Notifications",
+    "reminderTime": "Heure de rappel"
+  },
+  "phases": {
+    "NEW": "Nouvelle lune",
+    "WAXING_CRESCENT": "Premier croissant",
+    "FIRST_QUARTER": "Premier quartier",
+    "WAXING_GIBBOUS": "Gibbeuse croissante",
+    "FULL": "Pleine lune",
+    "WANING_GIBBOUS": "Gibbeuse décroissante",
+    "LAST_QUARTER": "Dernier quartier",
+    "WANING_CRESCENT": "Dernier croissant"
+  },
+  "zodiac": {
+    "ARIES": "Bélier",
+    "TAURUS": "Taureau",
+    "GEMINI": "Gémeaux",
+    "CANCER": "Cancer",
+    "LEO": "Lion",
+    "VIRGO": "Vierge",
+    "LIBRA": "Balance",
+    "SCORPIO": "Scorpion",
+    "SAGITTARIUS": "Sagittaire",
+    "CAPRICORN": "Capricorne",
+    "AQUARIUS": "Verseau",
+    "PISCES": "Poissons"
+  },
+  "categories": {
+    "cut": "Coupe",
+    "color": "Coloration",
+    "wax": "Épilation",
+    "treat": "Traitement"
+  },
+  "badges": {
+    "Excellent": "Excellent",
+    "Good": "Bon",
+    "Neutral": "Neutre",
+    "NotIdeal": "Pas idéal",
+    "Avoid": "Éviter"
+  },
+  "categoryOrder": {
+    "title": "Ordre des catégories",
+    "subtitle": "Organisez les catégories selon vos préférences",
+    "dragToReorder": "Glisser pour réorganiser",
+    "saveOrder": "Sauvegarder l'ordre",
+    "resetOrder": "Réinitialiser l'ordre"
+  },
+  "weekdays": {
+    "short": ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"],
+    "long": ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
+  },
+  "months": {
+    "short": ["Jan", "Fév", "Mar", "Avr", "Mai", "Jun", "Jul", "Aoû", "Sep", "Oct", "Nov", "Déc"],
+    "long": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+  }
+}

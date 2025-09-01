@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "Luna Schönheit",
+    "subtitle": "Ihr Mondkalender"
+  },
+  "navigation": {
+    "today": "Heute",
+    "calendar": "Kalender",
+    "settings": "Einstellungen"
+  },
+  "today": {
+    "bestAdvice": "Beste Empfehlung",
+    "todayAdvice": "Heutige Empfehlungen",
+    "seeDetails": "Details anzeigen",
+    "illumination": "Beleuchtung",
+    "moonAge": "Mondalter",
+    "days": "Tage"
+  },
+  "calendar": {
+    "title": "Kalender",
+    "monthYear": "{{month}} {{year}}",
+    "previousMonth": "Vorheriger Monat",
+    "nextMonth": "Nächster Monat",
+    "goToToday": "Zu Heute gehen"
+  },
+  "dayDetail": {
+    "title": "Details für {{date}}",
+    "backToCalendar": "Zurück zum Kalender",
+    "advice": "Empfehlungen",
+    "moonPhase": "Mondphase",
+    "zodiacSign": "Sternzeichen"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "subtitle": "Konfigurieren Sie Ihre Präferenzen",
+    "language": "Sprache",
+    "timezone": "Zeitzone",
+    "notifications": "Benachrichtigungen",
+    "reminderTime": "Erinnerungszeit"
+  },
+  "phases": {
+    "NEW": "Neumond",
+    "WAXING_CRESCENT": "Zunehmende Sichel",
+    "FIRST_QUARTER": "Erstes Viertel",
+    "WAXING_GIBBOUS": "Zunehmender Mond",
+    "FULL": "Vollmond",
+    "WANING_GIBBOUS": "Abnehmender Mond",
+    "LAST_QUARTER": "Letztes Viertel",
+    "WANING_CRESCENT": "Abnehmende Sichel"
+  },
+  "zodiac": {
+    "ARIES": "Widder",
+    "TAURUS": "Stier",
+    "GEMINI": "Zwillinge",
+    "CANCER": "Krebs",
+    "LEO": "Löwe",
+    "VIRGO": "Jungfrau",
+    "LIBRA": "Waage",
+    "SCORPIO": "Skorpion",
+    "SAGITTARIUS": "Schütze",
+    "CAPRICORN": "Steinbock",
+    "AQUARIUS": "Wassermann",
+    "PISCES": "Fische"
+  },
+  "categories": {
+    "cut": "Haarschnitt",
+    "color": "Färbung",
+    "wax": "Enthaarung",
+    "treat": "Behandlung"
+  },
+  "badges": {
+    "Excellent": "Ausgezeichnet",
+    "Good": "Gut",
+    "Neutral": "Neutral",
+    "NotIdeal": "Nicht ideal",
+    "Avoid": "Vermeiden"
+  },
+  "categoryOrder": {
+    "title": "Kategorienreihenfolge",
+    "subtitle": "Ordnen Sie die Kategorien nach Ihren Präferenzen",
+    "dragToReorder": "Ziehen Sie zum Neuordnen",
+    "saveOrder": "Reihenfolge speichern",
+    "resetOrder": "Reihenfolge zurücksetzen"
+  },
+  "weekdays": {
+    "short": ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+    "long": ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
+  },
+  "months": {
+    "short": ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+    "long": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
+  }
+}
