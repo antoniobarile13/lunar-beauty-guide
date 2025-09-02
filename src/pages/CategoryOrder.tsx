@@ -9,6 +9,7 @@ import { BeautyCategory } from "@/types/lunar";
 import { generateDailyAdviceRange } from "@/services/adviceService";
 import { BeautyBadge } from "@/components/BeautyBadge";
 import { cn } from "@/lib/utils";
+import { useAppStore } from "@/store/appStore";
 
 interface CategoryData {
   category: BeautyCategory;
@@ -40,10 +41,16 @@ const categories: CategoryData[] = [{
 }];
 
 export default function CategoryOrder() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const { settings } = useAppStore();
   const [selectedCategory, setSelectedCategory] = useState<BeautyCategory | null>(null);
   const [favorableDates, setFavorableDates] = useState<any[]>([]);
+
+  // Map i18n language to advice service locale
+  const getAdviceLocale = (lang: string): 'it' | 'en' => {
+    return lang === 'en' ? 'en' : 'it'; // Default to Italian for all other languages
+  };
 
   const handleCategorySelect = (category: BeautyCategory) => {
     setSelectedCategory(category);
@@ -54,7 +61,8 @@ export default function CategoryOrder() {
     endDate.setDate(today.getDate() + 30);
     const startDateISO = today.toISOString().split('T')[0];
     const endDateISO = endDate.toISOString().split('T')[0];
-    const adviceRange = generateDailyAdviceRange(startDateISO, endDateISO, 'Europe/Zurich', 'it');
+    const adviceLocale = getAdviceLocale(settings.language);
+    const adviceRange = generateDailyAdviceRange(startDateISO, endDateISO, settings.timezone, adviceLocale);
 
     // Filtra solo le date con punteggio positivo per la categoria selezionata
     const favorable = adviceRange.filter(advice => advice.items[category].score >= 1)
