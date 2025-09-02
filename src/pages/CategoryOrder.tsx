@@ -166,9 +166,6 @@ export default function CategoryOrder() {
                     </div>
                     <div className="text-right">
                       <BeautyBadge type={advice.items[selectedCategory].badge} />
-                      <div className="text-xs text-muted-foreground mt-1">
-                        {t("categoryOrder.score")}: {advice.items[selectedCategory].score}
-                      </div>
                     </div>
                   </div>
                 </CardContent>
