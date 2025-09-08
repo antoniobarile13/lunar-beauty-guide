@@ -14,22 +14,31 @@ export class LocationService {
 
   async getCurrentPosition(): Promise<LocationData> {
     try {
+      console.log('Checking location permissions...');
+      
       // Check permissions first
       const permission = await Geolocation.checkPermissions();
+      console.log('Current permission status:', permission);
       
       if (permission.location !== 'granted') {
+        console.log('Requesting location permissions...');
         const requestResult = await Geolocation.requestPermissions();
+        console.log('Permission request result:', requestResult);
+        
         if (requestResult.location !== 'granted') {
           throw new Error('Location permission denied');
         }
       }
 
-      // Get current position
+      console.log('Getting current position...');
+      // Get current position with more aggressive settings
       const position = await Geolocation.getCurrentPosition({
         enableHighAccuracy: true,
-        timeout: 15000,
-        maximumAge: 300000 // 5 minutes cache
+        timeout: 30000, // Increased timeout
+        maximumAge: 60000 // 1 minute cache
       });
+
+      console.log('Position obtained:', position);
 
       const locationData: LocationData = {
         latitude: position.coords.latitude,
@@ -38,9 +47,11 @@ export class LocationService {
       };
 
       this.currentLocation = locationData;
+      console.log('Location service updated with:', locationData);
       return locationData;
     } catch (error) {
       console.error('Error getting location:', error);
+      console.log('Using fallback location (Geneva)');
       // Fallback to Geneva coordinates if location fails
       return {
         latitude: 46.2044,
