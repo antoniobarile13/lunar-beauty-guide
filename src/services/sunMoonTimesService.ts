@@ -54,11 +54,16 @@ function formatTime(date: Date): string {
   return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
 }
 
-export function getSunMoonTimes(dateISO: string, timezone: string = 'Europe/Zurich'): SunMoonTimes {
+export function getSunMoonTimes(
+  dateISO: string, 
+  timezone: string = 'Europe/Zurich',
+  latitude: number = 46.2044,
+  longitude: number = 6.1432
+): SunMoonTimes {
   const date = new Date(dateISO + 'T12:00:00'); // Use noon to avoid timezone issues
   
-  const solar = calculateSolarTimes(date);
-  const lunar = calculateLunarTimes(date);
+  const solar = calculateSolarTimes(date, latitude, longitude);
+  const lunar = calculateLunarTimes(date, latitude);
   
   return {
     solarSunrise: formatTime(solar.sunrise),

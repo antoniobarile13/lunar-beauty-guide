@@ -1,31 +1,58 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "@/store/appStore";
 import { getTodayAdvice } from "@/services/adviceService";
 import { getSunMoonTimes } from "@/services/sunMoonTimesService";
+import { locationService } from "@/services/locationService";
 import { MoonIcon } from "@/components/MoonIcon";
 import { BeautyCard } from "@/components/BeautyCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Star, Calendar, Sunrise, Sunset } from "lucide-react";
 export default function Today() {
-  const {
-    t
-  } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
-  const {
-    settings,
-    setCurrentDate
-  } = useAppStore();
+  const { settings, location, setCurrentDate, setLocation } = useAppStore();
+  const [sunMoonTimes, setSunMoonTimes] = useState(() => 
+    getSunMoonTimes(new Date().toISOString().split('T')[0], settings.timezone)
+  );
 
   // Get today's date and advice
   const today = new Date().toISOString().split('T')[0];
   const todayAdvice = getTodayAdvice(settings.timezone, settings.language);
-  const sunMoonTimes = getSunMoonTimes(today, settings.timezone);
   useEffect(() => {
     setCurrentDate(today);
-  }, [today, setCurrentDate]);
+    
+    // Get location and update sun/moon times
+    const updateLocation = async () => {
+      try {
+        let currentLocation = location;
+        
+        // Check if we have a recent location (less than 5 minutes old)
+        if (!currentLocation || !locationService.isLocationFresh(currentLocation)) {
+          currentLocation = await locationService.getCurrentPosition();
+          setLocation(currentLocation);
+        }
+        
+        // Update sun/moon times with precise location
+        const newSunMoonTimes = getSunMoonTimes(
+          today, 
+          settings.timezone,
+          currentLocation.latitude,
+          currentLocation.longitude
+        );
+        setSunMoonTimes(newSunMoonTimes);
+      } catch (error) {
+        console.error('Failed to get location for sun/moon times:', error);
+        // Fallback to default location
+        const defaultTimes = getSunMoonTimes(today, settings.timezone);
+        setSunMoonTimes(defaultTimes);
+      }
+    };
+    
+    updateLocation();
+  }, [today, setCurrentDate, location, setLocation, settings.timezone]);
   const handleSeeDetails = () => {
     navigate(`/day/${today}`);
   };
